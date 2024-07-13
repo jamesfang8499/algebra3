@@ -293,7 +293,7 @@ $\therefore\quad y=3x+2$为所求的切线方程.
 \begin{solution}
 $y=\sqrt{2px}\quad (y\ge 0,\; x\ge 0)$
 \[\begin{split}
-    y^{\prime}\Big|_{x=x_{0}}=\lim_{x\to x_{0}}\frac{\sqrt{2px}-\sqrt{2px_{0}}}{x-x_{0}}&=\lim_{x\to x_{0}}\frac{\sqrt{2p}(\sqrt{x}-\sqrt{x_{0}})}{(\sqrt{x}-\sqrt{x_{0}})(\sqrt{x}+\sqrt{x_{0}})}\\
+    y' \Big|_{x=x_{0}}=\lim_{x\to x_{0}}\frac{\sqrt{2px}-\sqrt{2px_{0}}}{x-x_{0}}&=\lim_{x\to x_{0}}\frac{\sqrt{2p}(\sqrt{x}-\sqrt{x_{0}})}{(\sqrt{x}-\sqrt{x_{0}})(\sqrt{x}+\sqrt{x_{0}})}\\
     &=\lim_{x\to x_{0}}\frac{\sqrt{2p}}{\sqrt{x}+\sqrt{x_{0}}}=\sqrt{\frac{p}{2x_{0}}}\\
 \end{split}\]
 以$P(x_0,y_0)$为切点做切线方程为
@@ -528,6 +528,933 @@ $\therefore\quad f'(x)=(\ln x)'=\frac{1}{x},\quad (x>0)$.
 
 已知函数$f(x)$、$g(x)$的导数分别为$f'(x)$、$g'(x)$
 
+\subsection{$y=f(x)+g(x)$}
+\[\begin{split}
+    \because\quad y' &=\lim_{\Delta x\to0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x\to0}\frac{\left[f(x+\Delta x)+g(x+\Delta x)\right]-\left[f(x)+g(x)\right]}{\Delta x}\\
+    &=\lim_{\Delta x\to0}\left[\frac{f(x+\Delta x)-f(x)}{\Delta x}+\frac{g(x+\Delta x)-g(x)}{\Delta x}\right]\\
+    &=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}+\lim_{\Delta x\to0}\frac{g(x+\Delta x)-g(x)}{\Delta x}\\
+    &=f' (x)+g' (x)
+\end{split}\]
+
+$\therefore\quad y' =[f(x)+g(x)]' =f' (x)+g' (x)$
+
+\begin{thm}{定理1}
+\[[f(x)+g(x)]' =f' (x)+g' (x)\]
+\end{thm}
+
+\begin{thm}{推论}
+\[[f(x)-g(x)]' =f' (x)-g' (x)\]
+\end{thm}
+
+\subsection{ $y=f(x)g(x)$}
+\[\begin{split}
+\because\quad \Delta y=&f(x+\Delta x)g(x+\Delta x)-f(x)g(x)\\
+&=f(x+\Delta x)g(x+\Delta x)-f(x)g(x+\Delta x)+f(x)g(x+\Delta x)-f(x)g(x)\\
+&=[f(x+\Delta x)-f(x)]g(x+\Delta x) +f(x)[g(x+\Delta x)-g(x)]
+\end{split}\]
+而
+\[\begin{split}
+    y' &=\lim_{\Delta x\to0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x\to0}\frac{\left[f(x+\Delta x)-f(x)\right]g(x+\Delta x)+f(x)\left[g(x+\Delta x)-g(x)\right]}{\Delta x}\\
+    &=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\cdot\lim_{\Delta x\to0}g(x+\Delta x)+f(x)\cdot\lim_{\Delta x\to0}\frac{g(x+\Delta x)-g(x)}{\Delta x}\\
+    &=f' (x)g(x)+f(x)g' (x)
+\end{split}\]
+
+$\therefore\quad y' =[f(x)g(x)]' =f' (x)g(x)+f(x)g' (x)$
+
+\begin{thm}{定理2}
+\[[f(x)g(x)]' =f' (x)g(x)+f(x)g' (x)\]
+\end{thm}
+
+\begin{thm}{推论}
+   \[ [cf(x)]'=cf'(x)\qquad \text{（$c$为常数）}\]
+\end{thm}
+
+\begin{example}
+求下列函数的导数
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $y=x^3+\sin x$
+    \item $y=x^3\sin x$
+\end{enumerate}
+\end{multicols}
+\end{example}
+
+\begin{solution}
+\begin{enumerate}[(1)]
+    \item $y'=(x^3)'+(\sin x)'=3x^2+\cos x$
+
+$\therefore\quad y'=3x^2+\cos x$
+
+\item $y'=(x^3)'\sin x+x^3(\sin x)'=3x^2\sin x+x^3\cos x$
+
+$\therefore\quad y'=3x^2\sin x+x^3\cos x$
+ \end{enumerate}   
+\end{solution}
+
+\subsection{$y=\frac{f(x)}{g(x)}$}
+\[\begin{split}
+    \because\quad  y&=\frac{f(x)}{g(x)}=f(x)\cdot \frac{1}{g(x)}\\
+y'&=f'(x)\cdot \frac{1}{g(x)}+f(x)\cdot \left[\frac{1}{g(x)}\right]'
+\end{split}\]
+
+$\therefore\quad $欲求$y'$，只需求出$\left[\frac{1}{g(x)}\right]'$
+
+\[\begin{split}
+  \because\quad   \left[\frac{1}{g(x)}\right]' &=\lim_{h\to 0}\frac{\frac{1}{g(x+h)}-\frac{1}{g(x)}}{h}=\lim_{h\to 0}\frac{g(x)-g(x+h)}{hg(x+h)g(x)}\\
+    &=\frac{1}{g(x)}\cdot \lim_{h\to 0}\frac{-[g(x+h)-g(x)]}{h}\cdot \lim_{h\to 0}\frac{1}{g(x+h)}\\
+&=\frac{1}{g(x)}\cdot [-g'(x)]\cdot \frac{1}{g(x)}=-\frac{g'(x)}{[g(x)]^2}
+\end{split}\]
+\[\begin{split}
+    \therefore\quad \left[\frac{1}{g(x)}\right]' &=-\frac{g'(x)}{[g(x)]^2}\\
+    y'=\left[\frac{f(x)}{g(x)}\right]'&=f' \left(x\right)\cdot\frac{1}{g\left(x\right)}+f\left(x\right)\cdot\left[\frac{1}{g\left(x\right)}\right]' \\
+    &=f' \left(x\right)\cdot\frac{1}{g\left(x\right)}-f\left(x\right)\cdot\frac{g' \left(x\right)}{\left[g\left(x\right)\right]^{2}}\\
+    &=\frac{f' \left(x\right)g\left(x\right)-f\left(x\right)g' \left(x\right)}{\left[g\left(x\right)\right]^{2}}
+\end{split}\]
+
+\begin{thm}{定理3}
+\[\left[\frac{f(x)}{g(x)}\right]'=\frac{f' \left(x\right)g\left(x\right)-f\left(x\right)g' \left(x\right)}{\left[g\left(x\right)\right]^{2}}\]
+其中$g(x)\ne 0$.
+\end{thm}
+
+\begin{example}
+    求下列函数的导数
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $y=\frac{x^3}{\sin x}$
+    \item $y=\frac{1}{x^3}$
+\end{enumerate}
+\end{multicols}
+\end{example}
+
+\begin{solution}
+\begin{enumerate}[(1)]
+    \item $y'=\left(\frac{x^3}{\sin x}\right)'=\frac{(x^3)'\sin x-x^3 (\sin x)'}{\sin^2 x}=\frac{3x^2\sin x-x^3\cos x}{\sin^2 x}$
+    
+    $\therefore\quad y'=\frac{3x^2\sin x-x^3\cos x}{\sin^2 x}$
+    \item $y'=\left(\frac{1}{x^3}\right)'=\frac{0\cdot x^3-1\cdot (x^3)'}{(x^3)^2}=-\frac{3x^2}{x^6}=-\frac{3}{x^4}$
+\end{enumerate}    
+\end{solution}
+
+\begin{example}
+    求证：当$n$为负整数时，公式$(x^n)'=nx^{n-1}$仍然成立.
+\end{example}
+
+\begin{proof}
+设$n=-k$（$k$为自然数）
+\[\begin{split}
+ \because\quad (x^n)'=\left(\frac{1}{x^k}\right)'=\frac{0\cdot x^k-1\cdot (x^k)'}{(x^k)^2}&=-\frac{kx^{k-1}}{x^{2k}}\\
+ &=\frac{-k}{x^{k+1}}=-kx^{-(k+1)}=nx^{n-1}   
+\end{split}\]
+
+$\therefore\quad (x^n)'=nx^{n-1}$（$n$为负整数）.
+\end{proof}
+
+
+\begin{rmk}
+\begin{enumerate}
+    \item 由例12.10可知，公式$(x^n)'=nx^{n-1}$可由$n$为自然数推广到$n$为任意整数.
+    \item 若$f(x)$、$g(x)$可导，则$f(x)\pm g(x)$、$f(x)g(x)$、$\frac{f(x)}{g(x)}\; (g(x)\ne 0)$都可导，并且
+\begin{enumerate}[(1)]
+\item $[f(x)\pm g(x)]'=f'(x)\pm g'(x)$;
+\item $[f(x)g(x)]'=f'(x)g(x)+f(x)g'(x)$;
+\item $\left[\frac{f(x)}{g(x)}\right]'=\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}$.
+\end{enumerate}
+
+    \item 利用数学归纳法，不难得出
+\[ [f_1(x)+f_2(x)+\cdots +f_n(x)]'=f'_1(x)+f'_2(x)+\cdots +f'_n(x)\]
+    对于$[f_1(x)f_2(x)\cdots f_n(x)]'=?$ 留给读者去证明自己的猜想.
+    \item 利用上述函数四则运算的导数公式，可将某些初等函数的导数问题转化为最简单的函数的导数来解决.
+\end{enumerate}
+\end{rmk}
+
+
+\begin{ex}
+\begin{enumerate}
+    \item 求下列各函数的导数：
+\begin{enumerate}[(1)]
+    \item $3x^4-4x^3+6x^2-7x+100-3x^{-1}+5x^{-2}-6x^{-3}$;
+    \item $x\ln x$;
+    \item $(3x^2+1)(x+\cos x)$;
+    \item $\frac{2x-1}{x+1}$.
+\end{enumerate}
+    \item 求下列函数的导数（今后可当公式用）：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $\tan x$
+    \item $\cot x$
+    \item $\sec x$
+    \item $\csc x$
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+\end{ex}
+
+\section*{习题二}
+\begin{center}
+    \bfseries A
+\end{center}
+
+\begin{enumerate}
+    \item 求下列函数的导数：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $- 3x^{2}+ 2x+ 1$
+    \item $( x+ 1) ^{2}( x- 1)$
+    \item $\frac{x+1}{x-1}$
+    \item $\frac{1}{x^{2}-3x+6}$
+    \item $x\sin x+\cos x$
+    \item $\frac{\sin x}{1+\cos x}$
+    \item $\frac{\ln x}{x}$
+    \item $x\tan x-\cot x$
+\end{enumerate}    
+\end{multicols}
+\item 已知：$f(x)=\cos x-\sin x$ 求：$f' \left(\frac\pi3\right)$, $f' \left(\frac{3\pi}4\right)$.
+\item 已知：$f(x)=\frac{3}{5-x}+\frac{x^{2}}{5}$, 求：$f' (0)$, $f' (2)$.
+\end{enumerate}
+
+\begin{center}
+    \bfseries B
+\end{center}
+
+\begin{enumerate}\setcounter{enumi}{3}
+    \item 求下列函数的导数：
+    \begin{multicols}{2}
+    \begin{enumerate}[(1)]
+\item $x^{2}\tan x$
+\item $\frac{x^{2}}{\tan x}$
+\item $\frac{\cos x}{1-x^{2}}$
+\item $x\sin x\ln x$
+\item $x\tan x-\cot x$
+\item $(x-a)(x-b)(x-c)$
+    \end{enumerate}    
+\end{multicols}
+
+\item 设$f(x)=\frac{x^{3}}{3}+\frac{x^{2}}{2}-2x$, 求下列方程的解集:
+\begin{multicols}{3}
+\begin{enumerate}[(1)]
+    \item $f' (x)=0$
+    \item $f' (x)=-2$
+    \item $f' (x)=10$
+\end{enumerate}
+\end{multicols}
+
+\item 设$f(x+1)=x^{3}-1$, 求$f' (x)$.
+\item 设$f(x)=\begin{cases}
+    3-x,& x<1\\
+    (3-x)(1-x),& 1\le x<2\\
+    -(1-x),& x\ge 2
+\end{cases}$，求$f'(x)$.
+\item 已知$f(x)=x\sin x$.
+\begin{enumerate}[(1)]
+\item 求$f'(x)$;
+\item 若令$F(x)=f'(x)$，求$F'(x)$.
+\end{enumerate}
+
+\item 已知$f(x)=(5x+2)^4$，求$f'(x)$.
+\end{enumerate}
+
+\section{复合函数的导数}
+在求函数$f(x)=(5x+2)^4$的导数$f'(x)$时，可将
+$(5x+2)^4$“展开”后再求导，也可运用函数乘积的导数运算定理求. 即
+\[\begin{split}
+[(5x+2)^{4}]' &=(5x+2)' (5x+2)^{3}+(5x+2)[(5x+2)^{3}]' \\
+&=(5x+2)' (5x+2)^{3}+(5x+2)' (5x+2)^{3}+(5x+2)^{2}[(5x+2)^{2}]' \\
+&=2(5x+2)' (5x+2)^{3}+(5x+2)^{2}[2(5x+2)' (5x+2)]\\
+&=4(5x+2)^{3}(5x+2)'     
+\end{split}\]
+$\therefore\quad f' (x)=[(5x+2)^{4}]'=4(5x+2)^{3}(5x+2)=20(5x+2)^{3}$
+
+由于函数$f(x)=(5x+2)^4$可以看成是由函数$y=u^4$和$u=5x+2$复合而成的. 从这个例子我们看到，函数$y=(5x+2)^4$的导数恰好等于对中间变量$u$的导数乘以中间变量对$x$的导数（即$4u^3\cdot u'_x$）.
+
+\begin{thm}
+{定理} 由函数$y=f(u)$和$u=\varphi(x)$构成的复合函数$y=f[\varphi(x)]$对自变量$x$的导数$y'_x$等于$y$对中间变量$u$的导数$y'_u$ 乘以中间变量$u$对自变量$x$的导数$u'_x$，即
+\[y'_x=y'_u\cdot u'_x\]    
+\end{thm}
+
+\begin{proof}
+若函数$y=f(u)$在点$u$处可导，则
+    $\Delta y=f' \left(u\right)\cdot \Delta u+\alpha\left(\Delta u\right)$（其中当$\Delta u\to0$时，$\alpha(\Delta u)\to0$）
+
+\[\begin{split}
+    \because\quad y'_x=\lim_{\Delta x\to0}\frac{\Delta y}{\Delta x}&=\lim_{\Delta x\to0}\frac{f' (u)\cdot\Delta u+\alpha(\Delta u)}{\Delta x}\\
+    &=f' \left(u\right)\lim_{\Delta x\to0}\frac{\Delta u}{\Delta x}+\lim_{\Delta x\to0}\frac{\alpha\left(\Delta u\right)}{\Delta x}\\
+    &=f(u)\varphi' (x)+0=y'_{u}\cdot  u'_{x}
+\end{split}\]
+$\therefore\quad y'_x=y'_{u}\cdot  u'_{x}$.
+\end{proof}
+
+\begin{rmk}
+这个求复合函数导数的方法，可以推广到两个以上的中间变量.例如，若函数$y=f(x)$是由函数$y=h(u)$, $u=\varphi(t)$, $t=g(x)$复合而成的，则$y'_x=y'_u\cdot u'_t\cdot t'_x$.
+\end{rmk}
+
+在求复合函数的导数时，关键在于分析清楚该函数是由哪几个函数复合而成的，否则极容易出现计算错误，请读者特别注意.
+
+\begin{example}
+    求$y=\sin^2 3x$的导数.
+\end{example}
+
+\begin{analyze}
+函数$y=\sin^2 3x$是由$y=u^2$, $u=\sin t$, $t=3x$复合而成的.
+\end{analyze}
+
+\begin{solution}
+\textbf{解法1} 
+\[\begin{split}
+    \because\quad y'_x=y'_u\cdot u'_t\cdot t'_x &=(u^2)'_u\cdot (\sin t)'_t\cdot (3x)'\\
+    &=2u\cdot \cos t\cdot 3 =6\sin 3x\cos 3x=3\sin 6x
+\end{split}\]
+
+$\therefore\quad y'_x=3\sin 6x$.
+
+\textbf{解法2}
+\[\begin{split}
+    \because \quad y' _{x}=(\sin^{2}3x)' &=2\sin3x\cdot (\sin 3x)' \\
+    &=2\sin 3x\mathrm{cos}3x\cdot (3x)' =\sin 6x\cdot 3 =3\sin 6x.
+\end{split}\]
+
+$\therefore\quad y'_x=3\sin 6x$.
+\end{solution}
+
+\begin{example}
+    求函数$y=\frac{1}{(2-5x)^4}$的导数
+\end{example}
+
+\begin{analyze}
+    函数$y=\frac{1}{(2-5x)^4}$是由函数$y=u^{-4}$, $u=2-5x$复合而成的.
+\end{analyze}
+
+\begin{solution}
+    \textbf{解法1} 
+\[\begin{split}
+    \because\quad y'_x=y'_u\cdot u'_x &=(u^{-4})'_u\cdot (2-5x)'\\
+    &=-4u^{-5}\cdot (-5) =20(2-5x)^{-5}=\frac{20}{(2-5x)^5}
+\end{split}\]
+
+$\therefore\quad y'_x=\frac{20}{(2-5x)^5}$.
+
+\textbf{解法2}
+\[\begin{split}
+    \because \quad y' _{x}=[(2-5x)^{-4}]' &=-4(2-5x)^{-5}\cdot (2-5x)' \\
+    &=\frac{-4}{(2-5x)^5}\cdot (-5)=\frac{20}{(2-5x)^5}
+\end{split}\]
+
+$\therefore\quad y'_x=\frac{20}{(2-5x)^5}$.
+\end{solution}
+
+\begin{example}
+求函数$y=x^{\alpha}$ （$\alpha$为任意实数，$x\in\R^+$）的导数.
+\end{example}
+
+\begin{analyze}
+    由于等式$y=x^{\alpha}$的右边是幂的形式且$x>0$，我们不妨对等式两边取对数.
+\[\ln y=\alpha\ln x\]
+这时等式两边就都能利用已有的知识对$x$求导了.
+\end{analyze}
+
+\begin{solution}
+\[\begin{split}
+    y&=x^{\alpha}\\
+    \ln y&=\alpha\ln x\\
+\frac{1}{y}\cdot y'_x &=\frac{\alpha}{x}\\
+y'_x&=y\cdot\frac{\alpha}{x}=\frac{\alpha x^{\alpha}}{x}=\alpha x^{\alpha-1}
+\end{split}\]
+$\therefore\quad y'=\alpha x^{\alpha-1}$
+\end{solution}
+
+\begin{rmk}
+\begin{enumerate}
+    \item 例12.13最终解决了幂函数$x^{\alpha}$（$\alpha$为任意实数，$x\in\R^+$）的导数.
+\[    (x^{\alpha})'=\alpha x^{\alpha-1}\]
+    作为它的特例，
+\[\begin{split}
+    (x^{n})'=n x^{n-1}&\qquad (n\in\Z)\\
+    \left(\sqrt[n]{x}\right)'=\frac{1}{n\sqrt[n]{x^{n-1}}}&\qquad (n\in\Z\text{且}n\ge 2)\\
+\end{split}\]
+
+\item 欲求函数$y=f(x)$的导数，先将它的两边取对数，然后再对它的两边分别按复合函数求导，这对于能利用对数运算性质变形的一些函数来说，是可采用的一种求导方法. 例如，求指数函数$y=a^x\; (a>0\text{且}a\ne 1)$的导数.
+\[\begin{split}
+    \ln y&= x\ln a\\
+    \frac{1}{y}\cdot y'_x&=\ln a\\
+    y'_x&=y\ln a=a^x\ln a
+\end{split}\]
+$\therefore\quad (a^x)'=a^x\ln a$
+
+特别地，当$a=e$时，$(e^x)'=e^x$.
+\end{enumerate}
+\end{rmk}
+
+
+
+
+\begin{example}
+    例4 求函数 $y= \sqrt [ 3] {\frac {x+ 2}{x- 1}}$ $( x> 1)$的导数
+
+
+\end{example}
+
+\begin{solution}
+\textbf{解法1} 
+\[\begin{split}
+    \because\quad  y'=\left(\sqrt[3]{\frac{x+2}{x-1}}\right)' &=\frac{1}{3}\left(\frac{x+2}{x-1}\right)^{-\tfrac{2}{3}}\cdot\left(\frac{x+2}{x-1}\right)' \\
+    &=\frac{1}{3}\left(\frac{x-1}{x+2}\right)^{\tfrac{2}{3}}\cdot\frac{-3}{(x-1)^{2}}=-\frac{\sqrt[3]{(x-1)^2(x+2)}}{(x-1)^2(x+2)}
+\end{split}\]
+$\therefore\quad y'=-\frac{\sqrt[3]{(x-1)^2(x+2)}}{(x-1)^2(x+2)}$
+
+\textbf{解法2} $\because\quad y=\left(\sqrt[3]{\frac{x+2}{x-1}}\right)\quad (x>1)$
+
+$\therefore\quad \ln y=\frac{1}{3}\left[\ln(x+2)-\ln(x-1)\right]$
+
+两边对$x$求导，得
+\[\begin{split}
+    \frac{1}{y}\cdot y'_x&=\frac{1}{3}\left(\frac{1}{x+2}-\frac{1}{x-1}\right)\\
+    y'_x&=\frac{y}{3}\cdot \frac{-3}{(x+2)(x-1)}=-\sqrt[3]{\frac{x+2}{x-1}}\cdot \frac{1}{(x+2)(x-1)}\\
+    &=-\frac{\sqrt[3]{(x-1)^2(x+2)}}{(x-1)^2(x+2)}
+\end{split} \]
+即：$y'=-\frac{\sqrt[3]{(x-1)^2(x+2)}}{(x-1)^2(x+2)}$
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+    \item 填空（写出下列函数$f(x)$的导数）:
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item 若$c$为常数，则$c'=\blank$;
+    \item $(x^{a})'=\blank$;
+    \item $(a^x)'=\blank$;
+    \item $\left(\frac{1}{x}\right)'=\blank$;
+    \item $(\sqrt{x})'=\blank$;
+    \item $(\ln x)'=\blank$;
+    \item $(e^x)'=\blank$;
+    \item $(\sin x)'=\blank$;
+    \item $(\cos x)'=\blank$;
+    \item $(\tan x)'=\blank$;
+    \item $(\cot x)'=\blank$;
+    \item $(\sec x)'=\blank$;
+    \item $(\csc x)'=\blank$.
+\end{enumerate}
+\end{multicols}
+    \item 填空（写出下列导数的运算法则）:
+\begin{enumerate}[(1)]
+    \item 若$c$为常数，$[cf(x)]'=\blank$;
+    \item $[u(x)\pm v(x)]'=\blank$;
+    \item $[u(x)v(x)]'=\blank$;
+    \item $[u(x)v(x)w(x)]'=\blank$;
+    \item $\left[\frac{u(x)}{v(x)}\right]'=\blank$;
+    \item 由函数$y=f(u)$, $u=\varphi(x)$复合而成的函数$y=f[\varphi(x)]$的导数$y'_x=\blank$.
+\end{enumerate}
+    \item 求下列函数的导数：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $y=(2x^{2}-x+3)^{2}$
+    \item $y=\frac{1}{2x+1}$
+    \item $y=\sqrt{x^{2}-5}$
+    \item $y=\frac{1}{\sqrt{3x-2}}$
+    \item $y=\sin x^{3}$
+    \item $y=\cos\left(2x-\frac{\pi}{6}\right)$
+    \item $y=e^{\sin x}+3^{x^{2}}$
+    \item $y=\log_{2}(2x^{2}-3x+1)$
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+\end{ex}
+
+\section{隐函数的导数}
+在12.7节中，我们为了求函数$y=a^x$的导数，曾将等式两边取对数，得
+\[\ln y=x\ln a\]
+即
+\[x\ln a-\ln y=0\]
+
+像这种变量之间的函数关系是由某一方程$F(x,y)=0$所确定的函数叫做隐函数.
+
+对隐函数求导数，应在等式的两边同时对$x$求导.
+
+\begin{example}
+    已知 $e^y=\sin x+2y$, 求 $y'_x$
+\end{example}
+
+\begin{solution}
+    在方程两边同时对$x$ 求导，得
+\[\begin{split}
+    e^y\cdot y' _x&=\cos x+2y'_x\\
+    (e^{y}-2)y'_{x}&=\cos x
+\end{split}\]
+当$e^{y}- 2\neq 0$时，$y'_{x}=\frac{\cos x}{e^{y}-2}$.
+\end{solution}
+
+
+\begin{example}
+    求椭圆$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$上一点$P(x_0,y_0)$处的切线方程。
+\end{example}
+
+\begin{analyze}
+    当$y_0\neq0$时，问题的关键是求点$P(x_0,y_0)$处切线
+的斜率，这就需视方程$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$中的$y$为$x$的函数，利用隐
+函数的求导方法求出$y'_x$.
+\end{analyze}
+
+\begin{solution}
+    由已知，$b^2x^2+a^2y^2=a^2b^2,\quad 2b^2x+2a^2y\cdot y'_x=0$
+
+    当 $y\neq0$ 时，$y'_{x}=-\frac{b_{2}x}{a_{2}y}$.
+
+因此，当$y_0\ne 0$时，椭圆$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$ 在点 $P(x_0,y_0)$处的切
+线斜率为 $K=-\frac{b^{2}x_{0}}{a^{2}y_{0}}$, 其切线方程为
+\[\begin{split}
+    y-y_{0}&=-\frac{b^{2}x_{0}}{a^{2}y_{0}}(x-x_{0})\\
+    b^2x_0x+a^2y_0y&=b^2 x^2_0+a^2 y^2_0\\
+    \frac{x_0x}{a^2}+\frac{y_0y}{b^2}&=\frac{x^2_0}{a^2}+\frac{y^2_0}{b^2}=1
+\end{split}\]
+
+$\therefore\quad $所求切线方程为$\frac{x_0x}{a^2}+\frac{y_0y}{b^2}=1$\hfill(1)
+
+当$y_0=0$时，椭圆在点$(a,0)$和$(-a,0)$的切线分别为$x=a$和$x=-a$，也符合(1)式. 
+
+$\therefore\quad $椭圆$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$上一点$P(x_0,y_0)$处的切线方程为$\frac{x_0x}{a^2}+\frac{y_0y}{b^2}=1$
+\end{solution}
+
+利用求隐函数导数的方法，我们还可求一些反三角函数的导数.
+
+\begin{example}
+求下列函数的导数（今后可当公式用）
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $y=\arcsin x$
+    \item $y=\arctan x$
+\end{enumerate}
+\end{multicols}
+\end{example}
+
+\begin{solution}
+\begin{enumerate}[(1)]
+    \item $\because\quad y=\arcsin x$
+
+$\therefore\quad \sin y=x$（转化为$y=\arcsin x$的反函数）等式两边对$x$求导，得
+\[\begin{split}
+    \cos y\cdot y'_x&=1\\
+y'_x&=\frac{1}{\cos y}=\frac{1}{\cos(\arcsin x)}=\frac{1}{\sqrt{1-x^2}}
+\end{split}\]
+$\therefore\quad y'=\frac{1}{\sqrt{1-x^2}}$
+
+\item $\because\quad y=\arctan x$
+
+$\therefore\quad \tan y=x$
+\[\begin{split}
+     \sec^2 y\cdot y'_x&=1\\
+     y'_x&=\frac{1}{\sec^2 y}=\frac{1}{1+\tan^2 y}=\frac{1}{1+x^2}
+\end{split}\]
+$\therefore\quad y'=\frac{1}{1+x^2}$.
+\end{enumerate}    
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+    \item 求双曲线$3x^2-y^2=1$在点$A(1,-\sqrt{2})$处的切线的斜率.
+    \item 求抛物线$y=2px\; (p>0)$上一点$p(x_0,y_0)$处的切线方程.
+    \item 求下列函数的导数：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $y=\arccos x$
+    \item $y={\rm arccot\;} x$
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+\end{ex}
+
+
+\section{初等函数的导数}
+从12.5——12.8节，我们陆续解决了求各基本初等函数的导数的问题，现将它们汇总如下，作为求函数导数的基本公式，并请读者回忆它们的推导过程.
+
+\begin{thm}{常数的导数}
+\[c'=0\qquad \text{（$c$为常数）}\]    
+\end{thm}
+
+\begin{thm}
+    {幂函数的导数}
+\[(x^{\alpha})'=\alpha x^{\alpha-1}\qquad \text{（$\alpha$为实数）}\]
+特别地，$x'=1,\quad \left(\frac{1}{x}\right)'=-\frac{1}{x^2},\quad (\sqrt{x})^1=\frac{1}{2\sqrt{x}}$等.
+\end{thm}
+
+\begin{thm}
+    {对数函数的导数}
+\begin{enumerate}[(1)]
+\item $(\ln x)' =\frac{1}{x}$;
+\item  $( \log _{a}x) ^{\prime }= \frac 1{x\ln a},\qquad ( a> 0\text{且}a\neq1)$.
+\end{enumerate}
+\end{thm}
+
+\begin{thm}{指数函数的导数}
+\begin{enumerate}[(1)]
+    \item $( e^x) ^{\prime }= e^x$;
+\item $(a^{x})' =a^{x}\ln a,\qquad ( a> 0\text{且} a\neq 1)$.
+\end{enumerate}
+\end{thm}
+
+\begin{thm}{三角函数的导数}
+\begin{enumerate}[(1)]
+    \begin{multicols}{2}
+    \item $(\sin x)' =\cos x$
+    \item $(\cos x)' =-\sin x$
+    \item $(\tan x)'  = \frac 1{\cos ^{2}x}= \sec ^{2}x$
+    \item $\left ( \cot x\right ) ^{\prime }= - \frac 1{\sin ^{2}x}= - \csc ^{2}x$
+    \item $\left(\sec x\right)' =\frac{\sin x}{\cos^{2}x}=\tan x\sec x$
+\end{multicols}
+    \item $\left(\csc x\right)' =-\frac{\cos x}{\sin^{2}x}=-\cot x\csc x$
+\end{enumerate}    
+\end{thm}
+
+\begin{thm}{反三角函数的导数}
+\begin{multicols}{2}
+  \begin{enumerate}[(1)]
+    \item $(\arcsin x)' =\frac{1}{\sqrt{1-x^{2}}}$
+    \item $(\arccos x)' =-\frac{1}{\sqrt{1-x^{2}}}$
+    \item $(\arctan x)'=\frac{1}{1+x^2}$
+    \item $({\rm arccot\;} x)'=-\frac{1}{1+x^2}$
+\end{enumerate}  
+\end{multicols}
+\end{thm}
+
+\begin{ex}
+    求下列函数的导数：
+ \begin{enumerate}
+    \item $y=\sin 3x\cos 2x+\cos 3x\sin 2x$
+    \item $y=\frac{2\tan 3x}{1-\tan^2 3x}$
+    \item $y=\arctan\sqrt{x}$
+    \item $y=e^{\cos 2x}$
+\end{enumerate}   
+\end{ex}
+
+\section{二阶导数}
+我们知道，一个运动的质点的位移$s=s(t)$对于时间$t$的导数是时刻$t$时的瞬时速度
+\[v=v(t)=s'(t)\]
+由于$v=v(t)$仍为$t$的函数，如果$v(t)$可导，那么称$v'(t)$是该质点在时刻$t$时的加速度.
+\[ a=a(t)=v'(t)=[s'(t)]'  \]
+
+\begin{thm}
+{定义} 对于函数$y=f(x)$，若$f'(x)$可导，那么它的导数$[f'(x)]'$叫做$f(x)$的二阶导数，记作$f''(x)$或$y''$.
+\end{thm}
+
+
+\begin{example}
+    已知$y=3x^4-2x^3+x+5$，求$y''$.
+\end{example}
+
+\begin{solution}
+$\because\quad y=3x^4-2x^3+x+5,\quad y'=12x^3-6x^2+1$
+
+$\therefore\quad y''=36x^2-12x$.
+\end{solution}
+
+\begin{example}
+    设$y=e^x\sin x$，求$y'\big|_{x=0}$及$y''\big|_{x=0}$.
+\end{example}
+
+\begin{solution}
+$\because\quad     y=e^x\sin x$
+
+$\therefore\quad y'=e^x\sin x+e^x\cos x=e^x(\sin x+\cos x)\quad \Rightarrow\quad y'\big|_{x=0}=1$
+
+$\because\quad y''=e^x(\sin x+\cos x)+e^x(\cos x-\sin x)=2e^x\cos x$
+
+$\therefore\quad y''\big|_{x=0}=2$.
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+    \item 某物体的运动方程为$s=v_0t-\frac{1}{2}gt^2$，求$t=2$时的速度和加速度.
+    \item  求下列函数的二阶导数：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+ \item  $y=x\sin x$
+\item  $y=\sqrt{x}$
+\item  $y=\tan x$
+\item  $y=ax^3+bx^2+cx+d$ 
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+\end{ex}
+
+\section*{习题三}
+\begin{center}
+    \bfseries A
+\end{center}
+
+\begin{enumerate}
+    \item 求下列函数的导数： 
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $y=\ln\tan x$
+    \item $y=\sin(2^x)$
+    \item $y=e^{\sin^2 x}$
+    \item $y=(\arcsin x)^2$
+    \item $y=\ln[\ln(\ln x)]$
+    \item $y=\sqrt{\cos x^2}$
+    \item $y=\arctan \frac{x+1}{x-1}$
+    \item $y=x^2\sin\frac{1}{x}$
+\end{enumerate}
+\end{multicols}
+    \item 求下列隐函数的导数$y'_x$：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $y^2-2xy+10=0$
+    \item $y-1=xe^y$
+    \item $x^3+y^3=3xy$
+    \item $x^y=y^x$
+\end{enumerate}
+\end{multicols}
+    \item 在曲线$y=x^3+x-2$上哪一点的切线与直线$y=4x-1$平行？
+    \item  写出双曲线$3x^2-y^2=1$在点$A(1,\sqrt{2})$处的切线方程.
+    \item  求下列函数的二阶导数：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $y=\sqrt{a^2-x^2}$
+    \item $y=e^{2x-1}$
+    \item $y=\sin^4 x+\cos^4 x$
+    \item $y=\ln\sin x$
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+
+
+\begin{center}
+    \bfseries B
+\end{center}
+
+\begin{enumerate}\setcounter{enumi}{5}
+    \item 求下列函数的导数： 
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $y=x^x$
+        \item $y=x^{\tfrac{1}{x}}$
+        \item $y=\sqrt{\frac{x-1}{x^2+3x}}$
+        \item $y=(\sin x)^{\cos x}$
+    \end{enumerate}
+\end{multicols}
+\end{enumerate}
+
+
+\section*{三、微分}
+
+\section{微分的概念及其运算}
+请先看两个例子：
+
+对于函数$y=f(x)=3x^2$，它的导函数$f'(x)=6x$，在$x=1$处，函数的改变量为
+\[\begin{split}
+   \Delta y=f(1+\Delta x)-f(1)
+&=3(1+\Delta x)^2-3\\
+&=6\cdot \Delta x+3(\Delta x)^2=f'(1)\cdot \Delta x+3(\Delta x)^2 
+\end{split}\]
+即$\Delta y=f'(1)\cdot \Delta x+3(\Delta x)^2$. 当$\Delta x$很小时，有$\Delta y\approx f'(1)\cdot \Delta x$.
+
+一个半径为$r$的球，它的表面积为$S=4\pi r^2$，当半径由$r$变为$r+\Delta r$时，其对应的表面积的改变量为
+\[\begin{split}
+\Delta S&=4\pi (r+\Delta r)^2-4\pi r^2\\
+&=8\pi r\cdot \Delta r+4\pi (\Delta r)^2\\
+&=S'_r\cdot \Delta r+4\pi (\Delta r)^2    
+\end{split}\]
+当$\Delta r$很小时，$\Delta S\approx S'_x\cdot \Delta r$.
+
+从近似计算的角度来看，$f'(x)\cdot \Delta x$是函数$y=f(x)$的改变量$\Delta y$的主要部分，当$|\Delta x|$很小时，$\Delta y$的值可用$f'(x)\cdot \Delta x$近似地表示出来. 在误差不太大的情况下，可将求$\Delta y$的复杂问题转化为计算$f'(x)\cdot \Delta x$.
+
+设函数$y=f(x)$在点$x$处可导.
+\begin{enumerate}
+    \item 自变量$x$的改变量$\Delta x$又称为自变量$x$的微分，记作$\dd x$，即$\dd x=\Delta x$.
+    \item $f'(x)\cdot \dd x$称为$f(x)$在点$x$处的微分，记作$\dd y$，即$\dd y=f(x)\cdot \dd x$.
+\end{enumerate}
+
+    有了微分的定义，函数$y=f(x)$的导数$f'(x)$又可看成函数的微分$\dd y$与自变量的微分的商，即
+\[\frac{\dd y}{\dd x}=f'(x)=\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}\]
+
+\begin{rmk}
+    微分一词源于拉丁文“differentia”，表示“差”的意思.
+\end{rmk}
+
+
+\begin{example}
+已知函数$y=\sqrt{\sin x}$，求
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $\frac{\dd y}{\dd x}$
+    \item $\dd y$
+\end{enumerate}
+\end{multicols}
+\end{example}
+
+\begin{analyze}
+由微分的定义可知，求$\frac{\dd y}{\dd x}$就是求$f'(x)$，而求$\dd y$是求$f'(x)\dd x$.   
+\end{analyze}
+
+\begin{solution}
+\begin{enumerate}[(1)]
+    \item $\frac{\dd y}{\dd x}=\left(\sqrt{\sin x}\right)'=\frac{1}{2\sqrt{\sin x}}\cdot (\sin x)'=\frac{\cos x}{2\sqrt{\sin x}}$
+    \item $\dd y=\left(\sqrt{\sin x}\right)'\dd x=\frac{\cos x}{2\sqrt{\sin x}}\cdot \dd x$
+\end{enumerate}
+\end{solution}
+
+\begin{rmk}
+    由于$(\sin x)'\dd x=\dd(\sin x)$，今后求$\dd y$时，又可写成
+\[\dd y=\dd\left(\sqrt{\sin x}\right)=\frac{1}{2\sqrt{\sin x}}\cdot \dd (\sin x)=\frac{\cos x}{2\sqrt{\sin x}}\cdot \dd x\]
+\end{rmk}
+
+一般地，对于$y=f(u)$与$u=g(x)$复合而成的$y=f[g(x)]$
+\[\begin{split}
+    dy=f'(u)du&=f'(u)\cdot g'(x)\dd x\\
+&=f'[g(x)]\cdot g'(x)\dd x
+\end{split}\]
+
+由于函数的微分是该函数的导数与自变量的积，即$\dd y=f'(x)\dd x$. 不难证明求微分的四则运算法则.
+
+\begin{thm}{微分的四则运算法则}
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $\dd (u\pm v)=\dd u\pm \dd v$
+    \item $\dd(uv)=v\dd u+u\dd v$
+    \item $\dd\left(\frac{u}{v}\right)=\frac{v\dd u-u\dd v}{v^2}$
+\end{enumerate}        
+\end{multicols}
+\end{thm}
+
+例如，
+\[\begin{split}
+    \dd\left(\frac{u}{v}\right)=\left(\frac{u}{v}\right)'\dd x&=\frac{vu'-uv'}{v^2}\cdot \dd x\\
+    &=\frac{v(u'\dd x)-u(v'\dd x)}{v^2}=\frac{v\dd u-u\dd v}{v^2}
+\end{split}\]
+
+\begin{example}
+    求函数$y=e^{3x}\sin 2x$的微分
+\end{example}
+
+\begin{solution}
+\[\begin{split}
+\dd y=\dd (e^{3x}\sin 2x)&=\sin 2x\cdot \dd(e^{3x})+e^{3x}\cdot \dd (\sin2x)\\
+&=\sin 2x\cdot e^{3x}\dd (3x)+e^{3x}\cos 2x\cdot \dd(2x)\\
+&=3\sin 2x\cdot e^{3x}\dd x+2e^{3x}\cdot \cos2x\dd x\\
+&=\left(3e^{3x}\sin2x+2e^{3x}\cdot \cos x\right)\dd x
+    \end{split}\]
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+    \item 写出各基本初等函数的微分.
+    \item 求下列函数的微分：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $y=x^3+2x^2-4x+5$
+    \item $y=e^{\sin x}\cdot \cos(2x+1)$
+    \item $y=\frac{\sin x}{x}$
+    \item $y=\arctan(\ln x)$
+\end{enumerate}
+\end{multicols}
+
+    \item 半径$R=$10mm的球，在冷却中缩短了0.01mm，求此时刻球体积的微分$\dd v$及$\Delta v-\dd v$的值.
+\end{enumerate}
+\end{ex}
+
+
+
+
+
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+x
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
 
 
 
@@ -548,22 +1475,12 @@ $\therefore\quad f'(x)=(\ln x)'=\frac{1}{x},\quad (x>0)$.
 
 
 
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
 
 
-\begin{example}
-    
-\end{example}
 
-\begin{solution}
-    
-\end{solution}
+
+
+
 
 
 \begin{example}
@@ -575,13 +1492,250 @@ $\therefore\quad f'(x)=(\ln x)'=\frac{1}{x},\quad (x>0)$.
 \end{solution}
 
 
-\begin{example}
-    
-\end{example}
 
-\begin{solution}
-    
-\end{solution}
+
+
+
+
+
+\section*{习题五}
+\begin{center}
+    \bfseries A
+\end{center}
+
+\begin{enumerate}
+    \item 求下列函数的单调区间：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+ \item $y=x^3-6x^2+9x-3$
+\item $y= \sqrt [ 3] {x^2+ 1}$ 
+\item $y=\frac{x}{x^{2}+1}$
+\item $y=x-2\sin x\quad (0\leqslant x\leqslant 2\pi)$   
+\end{enumerate}
+\end{multicols}
+
+\item    求下列函数的极值：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+\item $y=\frac{x}{2}+\frac{2}{x}$ 
+\item $y=3x^4-4x^3$ 
+\item $y=\frac{(x-2)(3-x)}{x^{2}}$
+\item $y=e^x\sin x$    
+\end{enumerate}
+\end{multicols}
+
+\item 求下列函数的最大值：
+\begin{enumerate}[(1)]
+    \item     $y= - x^{3}+ 3x^{2}+ 2\quad ( - 2\leqslant x\leqslant 3)$ 
+    \item       $y=\frac{x-1}{x+1}$
+    \item     $y= \frac {a^{2}}x+ \frac {b^{2}}{1- x}\quad ( 0< x< 1,\;  a, b\in \R^{+ })$ 
+    \item       $y= \arctan \frac {1- x}{1+ x}\quad ( 0\leqslant x\leqslant 1)$
+\end{enumerate}
+
+\item 一面积为$8\x 5{\rm cm}^{2}$的长方形的纸板，在各角剪去相同的小正方形，把四边折起成一个无盖盒子，要使纸盒的容积最大，则剪去的小正方形的边长应多长？
+\item 设抛物线 $y=2x-x^2$ 在$x$轴上方的部分与直线 $y=t$
+（$t>0$）交于两点$P$、$Q$，求以$OP$、$OQ$为邻边的平行四边形$POQR$的面积$S$的最大值.
+\item 在高15cm，底面半径6cm的直圆锥内作内接的直圆柱（其底面在直圆锥的底面上），求：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item 表面积的最大值；
+    \item 体积的最大值．
+\end{enumerate}
+\end{multicols}
+\item 半径为$R$、圆心角为$\alpha$弧度的扇形，卷成一个圆锥，求$\alpha$为多大时，圆锥的体积最大.
+\item 求下列函数的图象的上凸或下凸区间及函数的拐点.
+\begin{multicols}{2}
+    \begin{enumerate}[(1)]
+        \item $y=\sqrt{x^2+1}$
+        \item $y=x+\sin x$
+    \end{enumerate}
+\end{multicols}
+
+\item 作下列函数的图象：
+\begin{multicols}{2}
+    \begin{enumerate}[(1)]
+        \item $y=\frac{1}{1-x^2}$
+        \item $y=\frac{x}{x^2-1}$
+    \end{enumerate}
+\end{multicols}
+\end{enumerate}
+
+\begin{center}
+    \bfseries B
+\end{center}
+
+\begin{enumerate}\setcounter{enumi}{9}
+    \item 若函数$f(x)=x^3+3kx^2-kx+2$既无极大值也无极小值，求实数$k$的取值范围.
+    \item   求函数$f(x)=|x|(x^2-3x)$在区间$(-1,4)$的最值．
+    \item   证明下列各不等式.
+\begin{enumerate}[(1)]
+    \item $\cos x>1-\frac{x^2}{2}\qquad (x>0)$
+    \item $x-\frac{x^2}{2}<\ln(1+x)<x\qquad (x>0)$
+\end{enumerate}
+\end{enumerate}
+
+\section{本章小结}
+\subsection{主要内容}
+本章主要内容是导数与微分的概念、求导数和求微分的方法以及如何利用导数和微分研究函数.
+
+\subsection{导数}
+导数概念是微积分学的基本概念之一，函数$y=f(x)$的导数$f'(x)$就是
+\[\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}=f'(x)\]
+$f'(x)$表示$f(x)$在点$x$处对自变量的变化率，它的几何意义是曲线$y=f(x)$在点$(x,f(x))$处的切线的斜率.
+
+\subsection{微分}
+函数$y=f(x)$的微分$\dd y$就是$f'(x)\dd x$. 即$\dd y=f'(x)\dd x\; (\dd x=\Delta x\ne 0)$. 在这个定义下，$\frac{\dd y}{\dd x}=f'(x)$.
+
+当$|\Delta x|$很小时，用$\dd y$替代$\Delta y$在近似计算中有广泛的应用.
+
+利用近似公式$f(x)\approx f(x_0)+f'(x_0)(x-x_0)$推出的常用近似公式应掌握.
+
+\subsection{求函数的导数或微分}
+求函数的导数或微分的方法叫做微分法，除掌握根据定
+义求导数的基本方法外，要熟练掌握求导的四则运算法则以及复合函数、隐函数的求导法则.
+
+本章中求出的各基本初等函数的导数（或微分）公式是进行微分运算的依据，必须熟练掌握.
+
+\subsection{导数的应用}
+作为导数的应用，在本章中我们利用一阶、二阶导数讨论了函数的单调性、极值、最值、拐点及函数的图象的凸性等.
+
+利用导数研究函数性质，使我们能够较为准确地作出函数的图象.
+
+\section*{复习题十二}
+\begin{center}
+    \bfseries A
+\end{center}
+\begin{enumerate}
+    \item 回答下列问题：
+\begin{enumerate}[(1)]
+\item 函数$f(x)$在点$x_0$处的导数是怎样定义的？$f'(x)$与$f'(x_0)$有什么不同？
+\item 函数$f(x)$在点$x_0$处的导数的几何意义是什么？
+\item $f(x)$在点$x_0$处可导与$f(x)$在点$x_0$处连续，它们之间有什么关系？
+\item 函数$f(x)$在点$x_0$处的微分是怎样定义的？怎样求这个微分？
+\item 写出各基本初等函数的微分公式．
+\item 写出函数的四则运算的求导法则．
+\item 求复合函数的导数时应注意什么？
+\item 怎样求隐函数的导数？
+\item 怎样确定函数的极值点和单调区间？
+\item 怎样求函数的最值？
+\item 怎样确定函数的图象的凹凸区间及拐点？
+\end{enumerate}
+
+    \item 函数$f(x)=|x^2-3x|$在$x=3$处是否可导？
+    \item 若函数$f(x)$在$x=a$处$f'(a)$存在，求\[\lim_{h\to 0}\frac{f(a+h)-f(a-h)}{2h}\]
+    \item 求下列函数的导数$\frac{\dd y}{\dd x}$.
+\begin{multicols}{2}
+ \begin{enumerate}[(1)]
+    \item $y=(x^3-2)(x+2)$
+    \item $y=(x-2)(x+1)(2x+1)$
+    \item $y=(x^2+x+1)^4$
+    \item $y=\frac{2x^2+3}{x(x^2+1)}$
+    \item $y=\sin^2(2x^2+3x)$
+    \item $y=\sqrt[3]{x^4-3x^3+2}$
+    \item $y=x^{5x}$
+    \item $y=\arctan(e^{3x})$
+\end{enumerate}   
+\end{multicols}
+
+\item 求下列函数的二阶导数
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $y=\frac{1}{x^3+1}$
+    \item $y=e^{\sqrt{x}}$
+    \item $y=\ln\sin x$
+    \item $y=\tan x$
+\end{enumerate}
+\end{multicols}
+\item 已知$y=\frac{x-3}{x+4}$，求证$2(y')^2=(y-1)y''$
+\item 已知$y=e^{\sqrt{x}}+e^{-\sqrt{x}}$，求证$xy''+\frac{1}{2}y'-\frac{1}{4}y=0$
+
+\item \begin{enumerate}[(1)]
+    \item 已知$\begin{cases}
+        x=\sin t\\ y=\cos 2t
+    \end{cases}$，求$\frac{\dd y}{\dd x}$
+    \item 求曲线$\begin{cases}
+        x=\sin t\\y=\cos 2t
+    \end{cases}$在$t=\frac{\pi}{2}$处的切线方程.
+\end{enumerate}
+
+\item 求曲线$\sqrt{x}+\sqrt{y}=3$在点$(1,4)$处的切线方程．
+\item 设在抛物线$y=x^2+1$上的任意一点$P$的切线和抛物线
+$y=x^2$交于$R$、$Q$两点，求证$P$为线段$RQ$的中点.
+\item 求下列函数的单调区间和极值.
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $y=(x-2)^5(2x+1)^4$
+    \item $y=\sqrt[3]{(2x-3)(x-3)^2}$
+    \item $y=x+\cos x$
+    \item $y=\frac{3x+1}{\sqrt{5x^2+4}}$
+\end{enumerate}
+\end{multicols}
+
+\item 求曲线$y^2=4-2x$上距原点最近的点$P(x,y)$.
+\item 将边长为$a$的正三角形的铁板的三个角如图那样挖去全等的四边形以后，将边折起做成无盖的三棱柱状的盒子，欲使其体积最大，问图中的$x$应为多少？
+
+\noindent
+\begin{minipage}{.45\textwidth}
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/1/A', 0/2/A}
+\tkzDefPoint(-30:1){C'}
+\tkzDefPoint(-30:2){C}
+\tkzDefPoint(-150:1){B'}
+\tkzDefPoint(-150:2){B}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon(A',B',C')
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below left](B)
+\tkzLabelPoints[below right](C)
+
+\tkzDefPointBy[projection = onto A--B](A')  \tkzGetPoint{A1}
+\tkzDefPointBy[projection = onto A--B](B')  \tkzGetPoint{B1}
+\tkzDefPointBy[projection = onto C--B](C')  \tkzGetPoint{C1}
+\tkzDefPointBy[projection = onto C--B](B')  \tkzGetPoint{B2}
+\tkzDefPointBy[projection = onto A--C](A')  \tkzGetPoint{A2}
+\tkzDefPointBy[projection = onto A--C](C')  \tkzGetPoint{C2}
+
+\tkzMarkRightAngles[size=.1](A',A1,B B',B1,A B',B2,C C',C1,B C',C2,A A',A2,C)
+
+\draw[pattern=north east lines](A)--(A1)--(A')--(A2)--cycle;
+\draw[pattern=north east lines](B)--(B1)--(B')--(B2)--cycle;
+\draw[pattern=north east lines](C)--(C1)--(C')--(C2)--cycle;
+\draw[decorate, decoration={brace, amplitude=5pt}](C)--node[below=5pt]{$x$}(C1);
+\draw[decorate, decoration={brace, amplitude=5pt}](C2)--node[right=3pt]{$x$}(C);
+
+
+
+\end{tikzpicture}
+\captionof*{figure}{第13题}
+\end{minipage}\hfill
+\begin{minipage}{.45\textwidth}
+        \centering
+\begin{tikzpicture}
+\draw(0,0)node[below left]{$B$} rectangle (4,2.5);
+\draw[pattern=north east lines](0,0) rectangle(.5,.5);
+\draw[pattern=north east lines](0,2.5-.5) rectangle(.5,2.5);
+\draw(.5,.5) rectangle (.5+1.5,.5+1.5);
+\draw[pattern=north east lines](.5+1.5,.5+1.5) rectangle(4,2.5)node[above right]{$D$};
+\draw[pattern=north east lines](.5+1.5,.5) rectangle(4,0)node[below right]{$C$};
+\node at(0,2.5)[above left]{$A$};
+\draw[dashed](2.5,.5)--(2.5,2);
+\end{tikzpicture}
+\captionof*{figure}{第14题}
+\end{minipage}
+
+
+\item 有一矩形的铁板$ABCD$，长与宽分别为16cm、10cm，若切去$A$、$B$为顶点的两个全等正方形，和以$C$、$D$为顶点的两个全等矩形（如图），用剩余
+部分沿直线折起做成长方体，求此长方体的最大体积.
+\item 作下列函数的图象：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $y=\left(\frac{1+x}{1-x}\right)^4$
+    \item $y=x-\arctan x$
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+
 
 
 
