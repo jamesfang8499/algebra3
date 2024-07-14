@@ -1349,9 +1349,186 @@ $\therefore\quad y''\big|_{x=0}=2$.
 \end{enumerate}
 \end{ex}
 
+\section{微分在近似计算中的应用}
+我们知道，若函数$y=f(x)$在点$x_0$处可导，当$|\Delta x|$很小时，可用微分$\dd y$近似代替函数的改变量$\Delta y$，于是
+\begin{align}
+  f(x)-f(x_0)&=\Delta y\approx f'(x_0)\dd x=f'(x_0)(x-x_0)\nonumber\\
+f(x)&\approx f(x_0)+f'(x_0)(x-x_0)  \tag{1}
+\end{align}
+所得的关系式(1)给出了求$f(x)$近似值的一个方法.
+
+\begin{example}
+    求$\sin31^{\circ}$的近似值（精确到0.0001）
+\end{example}
+
+\begin{analyze}
+   $\sin31^{\circ}$的值不易直接求出，为了求出$\sin31^{\circ}$的近似值，可先构造函数$f(x)=\sin x$，而$f(30^{\circ})$和$f'(30^{\circ})$的值都容易求出，所以利用关系式
+\[f(31^{\circ})\approx f(30^{\circ})+f'(30^{\circ})\cdot \Delta x\]
+可求出$f(31^{\circ})$的近似值．
+
+又$\because\quad f(30^{\circ})$、$f'(30^{\circ})$、$f(31^{\circ})$都是实数，
+
+$\therefore\quad $必须将$\Delta x$化为弧度，即
+$\Delta x=31^{\circ}-30^{\circ}=1^{\circ}=\frac{\pi}{180}$
+\end{analyze}
+
+\begin{solution}
+令$f(x)=\sin x$, $x_0=30^{\circ}=\frac{\pi}{6}$，则
+\[\Delta x=31^{\circ}-30^{\circ}=1^{\circ}=\frac{\pi}{180}\]
+
+$\because\quad f(31^{\circ})\approx f\left(\frac{\pi}{6}\right)+f'\left(\frac{\pi}{6}\right)\cdot \dd x$
+
+$\therefore\quad \sin31^{\circ}\approx \sin\frac{\pi}{6}+\cos\left(\frac{\pi}{6}\right)\cdot \frac{\pi}{180}\approx \frac{1}{2}+\frac{\sqrt{3}}{2}\x 0.01745\approx 0.5151$
+
+即$\sin31^{\circ}\approx 0.5151$.
+\end{solution}
+
+\begin{rmk}
+    利用微分进行近似计算的一般步骤是：
+\begin{enumerate}[(1)]
+\item 设适当的辅助函数$f(x)$;
+\item 确定定点$x_0$及$\Delta x$，使$f(x_0)$易于计算，而且$|\Delta x|$相对较小；
+\item 求$f'(x_0)$的值；
+\item 按近似公式$f(x_0+\Delta x)\approx f(x_0)+f'(x_0)\Delta x$进行计算.
+\end{enumerate}
+\end{rmk}
+
+对于关系式(1)，若设$x_0=0$，则(1)式变为
+\begin{equation}
+   f(x)=f(0)+f'(0)\cdot x  \tag{2}
+\end{equation}
+
+利用(2)式，当$x$充分小时，可导出常用的一些近似计算公式.
+\begin{itemize}
+    \item $(1+x)^{\alpha}\approx 1+\alpha x$  \hfill (1)
+    \item $e^x\approx 1+x$  \hfill (2)
+    \item $\ln(1+x)\approx x$  \hfill (3)
+    \item $\sin x\approx x$  \hfill (4)
+    \item $\tan x\approx x$  \hfill (5)
+\end{itemize}
+（上述各近似公式的推导，请读者自己完成）
+
+  \begin{example}
+    求$\sqrt[5]{270}$的近似值（精确到0.0001）．
+\end{example}
+
+\begin{analyze}
+    为了能利用近似公式（1），可按照公式（1）的结构，将式子变形.
+\[\sqrt[5]{270}=\sqrt[5]{243+27}=3\sqrt[5]{1+\frac{27}{243}}=3\left(1+\frac{27}{243}\right)^{\tfrac{1}{5}}\]
+\end{analyze}
+
+\begin{solution}
+\[\begin{split}
+    \sqrt[5]{270}=\sqrt[5]{243+27}&=3\left(1+\frac{27}{243}\right)^{\tfrac{1}{5}}\\
+    &\approx 3\left(1+\frac{1}{5}\x\frac{27}{243}\right) \qquad \text{（近似公式(1)）}\\
+    &=3+\frac{1}{15}\approx 3.0667
+\end{split}\]
+即$\sqrt[5]{270}\approx 3.0667$.
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+    \item 当$|x|$充分小时，求证：
+\begin{multicols}{2}
+\begin{enumerate}[(1)]
+    \item $\sqrt[n]{1+x}\approx 1+\frac{x}{n}\qquad (n\in\N,\; n\ge 2)$
+    \item $e^x\approx 1+x$
+\end{enumerate}
+\end{multicols}
+\item 求下列各数的近似值（精确到0.0001）：
+\begin{multicols}{2}
+    \begin{enumerate}[(1)]
+        \item $\sin 46^{\circ}$
+        \item $\sqrt{4.01}$
+        \item $\ln 0.9998$
+        \item $e^{-0.0002}$
+    \end{enumerate}
+    \end{multicols}
+\end{enumerate}
+\end{ex}
+
+\section*{习题四}
+\begin{center}
+    \bfseries A
+\end{center}
+
+\begin{enumerate}
+    \item 已知函数$y=x^3-x$，在$x=2$、$\dd x=0.01$时，计算$\Delta y$及$\dd y$.
+    \item 当自变量$x$由$\frac{\pi}{6}$变到$\frac{61\pi}{360}$时，求函数$y=\sin\frac{x}{3}$的微分（精确到0.0001）．
+   \item 在下列图形中，标出相应的$\Delta y$及$\dd y$.
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=stealth]
+\begin{scope}
+    
+\end{scope}
+\begin{scope}[xshift=5cm]
+    
+\end{scope}
+\end{tikzpicture}
+    \caption*{第3题}
+\end{figure}
+\item 求下列函数的微分：
+\begin{multicols}{2}
+    \begin{enumerate}[(1)]
+        \item $y=\frac{2}{x^2}$
+        \item $y=5\sqrt[3]{x+1}$
+        \item $y=(1+2x-x^2)^3$
+        \item $y=\cos x^2$
+        \item $y=e^x\sin^2 x$
+        \item $y=\frac{2x-1}{(x-1)^2}$
+        \item $y=\frac{1-x^2}{1+x^2}$
+        \item $y=\frac{1}{3}\tan^3\theta+\tan\theta$
+    \end{enumerate}
+\end{multicols}
+
+\item 计算$\tan 30^{\circ}30'$的近似值（精确到0.0001）．
+\item 计算$\sin29^{\circ}$的近似值（精确到0.0001）．
+\item 计算下列各数的近似值（精确到0.0001）：
+\begin{multicols}{2}
+    \begin{enumerate}[(1)]
+        \item $\sqrt[5]{1.002}$
+        \item $\sqrt[3]{0.998}$
+        \item $\ln1.0021$
+        \item $\sin0.1^{\circ}$
+    \end{enumerate}
+\end{multicols}
+\end{enumerate}
+
+\begin{center}
+    \bfseries B
+\end{center}
+
+\begin{enumerate}\setcounter{enumi}{7}
+    \item 已知函数$f(x)=x^2$在点$x_0$处自变量$x$的微分$\dd x=0.2$, 对应函数的微分$\dd f(x)=-0.8$，试求$x_0$的值.
+    \item   已知函数$y=f[f(x)]$，求$\frac{\dd y}{\dd x}$及$\dd y$.
+        \item   已知函数$y=f(\sin x)$，求$\frac{\dd y}{\dd(\sin x)}$及$\frac{\dd y}{\dd x}$.
+        \item  单摆的周期$T$（秒）与单摆的长度$\ell$（厘米）之间的函数关系$T=2\pi\sqrt{\frac{\ell}{980}}$，长度为20厘米的单摆加长1厘米后，它的周期大约增加多少？
+\end{enumerate}
+
+\section*{四、利用导数研究函数}
+过去我们曾研究过函数的性质，现在当我们学习导数后，就可以用导数直接研究函数的性质了，并且方法要比过去简捷.
+
+\section{函数的单调性}
+首先我们介绍一个有关导数的十分重要的定理——拉格朗日中值定理.（这个定理的证明留给读者上大学后去完成）
 
 
 
+
+
+
+
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
 
 
 
@@ -1390,7 +1567,6 @@ $\therefore\quad y''\big|_{x=0}=2$.
 
 
 
-
 \begin{example}
     
 \end{example}
@@ -1399,16 +1575,6 @@ $\therefore\quad y''\big|_{x=0}=2$.
     
 \end{solution}
 
-
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
 
 
 
@@ -1433,68 +1599,212 @@ $\therefore\quad y''\big|_{x=0}=2$.
 \end{solution}
 
 
+\begin{thm}
+{定理} 设函数$y=f(x)$在开区间$(a,b)$内有二阶导数.
+\begin{enumerate}[(1)]
+\item 若对于任意的$x\in (a,b)$, $f''(x)>0$，则曲线$y=f(x)$在区间$(a,b)$内下凸；
+\item 若对于任意的$x\in (a,b)$, $f''(x)<0$，则曲线$y=f(x)$在区间$(a,b)$内上凸.  
+\end{enumerate}
+\end{thm}
+
+此定理只作如前的说明，它的证明留给读者上大学后完成.
+
+\begin{example}
+    求证：正弦曲线$y=\sin x$在$(0,\pi)$上是上凸.
+\end{example}
+
+\begin{proof}
+\[y=\sin x,\quad y'=\cos x,\quad y''=-\sin x\]
+
+$\because\quad $当$x\in(0,\pi)$时，$y''=-sinx<0$
+
+$\therefore\quad $正弦曲线$y=\sin x$在区间$(0,\pi)$是上凸的.
+\end{proof}
+
+大家知道，对于函数$f(x)=\sin x\; (x\in (0,\pi))$, $x=\frac{\pi}{2}$是它的极大值点，$f'(x)$在点$\frac{\pi}{2}$附近的符号是“左正右负”与函数的图象上凸是一致的，因此，又可用$f''(x)$在该点值的正负来判定驻点是函数的极大值点还是极小值点. 下面给出一种利用二阶导数来判定函数极值的方法（证明留给读者）.
+
+\begin{thm}
+    {定理} 设$f(x_0)=0$且$f''(x_0)$存在
+\begin{enumerate}[(1)]
+\item 若$f''(x_0)>0$，则$f(x)$在点$x_0$处有极小值$f(x_0)$;
+\item 若$f''(x_0)<0$，则$f(x)$在点$x_0$处有极大值$f(x_0)$.
+\end{enumerate}
+\end{thm}
+
+
+\begin{example}
+    求函数$f(x)=\frac{1}{3}x^3-4x+4$的极值.
+\end{example}
+
+\begin{solution}
+\[\begin{split}
+    f(x)&=\frac{1}{3}x^3-4x+4\\
+f'(x)&=x^2-4=(x-2)(x+2)\\
+f''(x)&=2x
+\end{split}\]
+令$f'(x)=0$，解得$f(x)$的驻点为$x_1=2$、$x_2=-2$
+
+$\because\quad f''(2)=4>0$
+
+$\therefore\quad y_{\text{极小}}=f(2)=\frac{8}{3}-8+4=-\frac{4}{3}$
+
+$\because\quad f''(-2)=-4<0$
+
+$\therefore\quad y_{\text{极大}}=f(-2)=-\frac{8}{3}+8+4=\frac{28}{3}$.
+
+对于函数$y=x^3$, 点$x=0$是曲线$y=x^3$由左半部分上凸转为右半部分下凸的分界点，并且$f'(0)=0$, $f''(0)=0$，像这样的点我们称它为曲线的拐点.
+\end{solution}
+
+\begin{thm}
+    {定义} 设函数$y=f(x)$的图象上一点$P(x_0,f(x_0))$恰为曲线$y=f(x)$上凸与下凸部分的分界点，则称点$P(x_0, f(x_0))$为曲线$y=f(x)$的拐点，$x_0$称为函数$f(x)$的拐点.
+\end{thm}
 
 
 
 \begin{example}
-    
+    求函数$f(x)=\sin x$的拐点.
 \end{example}
 
 \begin{solution}
-    
-\end{solution}
-x
+    \[f(x)=\sin x,\quad f'(x)=\cos x,\quad f''(x)=-\sin x\]
+令$f''(x)=0$得$x=k\pi\; (k\in\Z)$
 
+又$\because\quad f''(x)$在点$k\pi$的两侧异号
 
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
+$\therefore\quad x=k\pi\; (k\in\Z)$为$f(x)=\sin x$的拐点.
 \end{solution}
 
+一般地，设函数$f(x)$在点$x_0$处的附近有二阶导数，并且：
+\begin{enumerate}[(1)]
+\item $f''(x_0)=0$;
+\item $f''(x)$的值在点的两侧异号
+\end{enumerate}
+则点$P(x_0,f(x_0))$为函数$y=f(x)$图象的拐点.
 
+类似于$f'(x_0)=0$是点$x_0$为$f(x)$的极值点的必要条件一样, $f''(x)=0$是点$x_0$为$f(x)$的拐点的必要条件，而不是充分条件. 例如，$f(x)=x^6$, $f''(x)=30x^4$，当$x\ne 0$时，$f''(x)>0$，故曲线$y=x^6$下凸，虽然$f''(0)=0$，但$x=0$不是函数的拐点，而是极小值点.
 
+\begin{ex}
+\begin{enumerate}
+    \item 求曲线$y=\arctan x$的上凸、下凸区间及拐点.
+    \item 求证函数$y=a^x$ （$a>0$且$a\ne 1$）的图象下凸．
+    \item 求$f(x)=x^3-3x^2-9x+14$的极值及拐点.
+\end{enumerate}
+\end{ex}
 
-
-
-
-
-
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-
-
-
-
+\section{函数的图象绘制}
+前面我们对函数的性质进行了进一步的研究，这就使我们能依据函数的性质，更准确地作出函数的图象. 今后在绘制
+一个函数的图象之前，一般应依次对函数作如下分析，然后列表画图.
+\begin{enumerate}
+\item 确定函数的定义域和值域（可大致确定图象的范围）；
+\item 验证函数的奇偶性、周期性（可缩小研究函数的范围）；
+\item 找出函数图象的某些特殊点（例如图象与坐标轴的交点、间断点及其他特殊点）；
+\item 利用导数求出函数的单调区间、极值点和极值、图象的上凸或下凸区间、拐点等；
+\item 考察函数的图象是否有渐近线（了解图象若无限延伸时，它的变化趋势）.
+\end{enumerate}
 
 
 
 
 
 \begin{example}
-    
+    试作函数 $f(x)=\frac{x^{2}}{x+1}$的图象
 \end{example}
 
 \begin{solution}
-    
+    对于函数$f(x)=\frac{x^2}{x+1}$,
+\begin{enumerate}[(1)]
+    \item $x\in ( - \infty , - 1) \cup ( - 1, + \infty )$ 
+    \item 当$x\in(-\infty,-1)$时，$f(x)<0$；当$x\in(-1,+\infty)$时$f(x)\geqslant0$；（当且仅当 $x=0$ 时，$f(x)=0$）
+    \item $f'(x)=\frac{x^2+2x}{(x+1)^2}$
+
+令 $f^\prime\left(x\right)=0$, 解得驻点 $x_1=0,\quad x=-2$.
+$$f''(x)=\frac{2(x+1)(x+1)^2-2(x+1)(x^2+2x)}{(x+1)^4}=\frac{2}{(x+1)^{3}}$$
+
+$\because\quad f''( 0) > 0$
+
+$\therefore\quad y_{\text{极 小 }}= f( 0) = 0$.
+
+又$\because\quad f'' (-2)<0$
+
+$\therefore\quad  y_{\text{极大}}=f(-2)=-4$.
+
+\item $\because\quad$当$x\in ( - \infty , - 1)$时, $f''( x) < 0$,
+
+$\therefore\quad $ 函数 $f(x)$的图象在区间$(-\infty,-1)$内上凸
+
+$\because\quad $ 当$x\in(-1,+\infty)$时, $f''(x)>0$
+
+$\therefore\quad$ 函数 $f(x)$的图象在区间$(-1,-\infty)$内下凸
+
+\item $f(x)$的递增区间是$(-\infty,-2]$, $[0,+\infty)$; 递减区间
+是$[-2,-1)$, $(-1,0]$
+
+\item $\because\quad f( x) = \frac {x^{2}}{x+ 1}= \frac {( x^{2}- 1) + 1}{x+ 1}=(x-1)+\frac{1}{x+1}$
+
+当 $x\to\infty$时，$f(x)\approx x-1$ 且 $f(x)\to\infty$
+
+$\therefore\quad $ 当  $x\to \infty$时，曲线 $y=f(x)$上的点到直线 $y=x-1$
+的距离$d\to0$.
+
+又$\because\quad \Lim{x}{- 1^{+}}f( x) = + \infty,\quad \Lim{x}{- 1^{- }}f( x) = - \infty$,
+
+$\therefore\quad $ 函数 $f(x)$的图象的渐近线方程是 $x=-1$ 和
+$y=x-1$.
+
+\item 由 以 上 分 析$f( x) \in ( - \infty , - 4) \cup [ 0, + \infty ) $.
+\end{enumerate}
+上述要点可汇总如下表：
+\begin{center}\small
+\begin{tabular}{cccccccc}
+    \hline
+$x$ & $(-\infty,-2)$ & $-2$ & $(-2,-1)$ & $-1$ & $(-1,0)$ & $0$ & $(0,+\infty)$\\
+\hline
+$f'(x)$   &    $+$     &  0       & $-$        &         & $-$        &   0      & $+$\\        
+$f''(x)$   &   $-$      &     $-$    &    $-$     &         &      $+$   &   $+$      & $+$\\     
+$f(x)$   & $-\infty\nearrow-4$& $-4$& $-4\searrow -\infty$&间断点&$+\infty\searrow 0$& 0& $0\nearrow +\infty$\\
+&   &    极大值     &         &         &       &   极小值      &   \\
+\hline
+\end{tabular}
+\end{center}
+函数$f(x)=\frac{x^2}{x+1}$的图象如图12.17.
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=stealth, scale=.6]
+\draw[->](-5,0)--(5,0)node[below]{$x$};
+\draw[->](0,-7.5)--(0,4)node[left]{$y$};
+\draw[domain=-5:4, thick, smooth]plot(\x, \x-1)node[below right]{$y=x-1$};
+\draw[thick](-1,-7)node[below]{$x=-1$}--(-1,4);
+\draw[domain=-1+.23:3.5, smooth, very thick, samples=100]plot(\x, {\x-1+1/(\x+1)})node[above left]{$y=\frac{x^2}{x+1}$};
+\draw[domain=-1-.23:-4.5, smooth, very thick, samples=100]plot(\x, {\x-1+1/(\x+1)});
+\node [below left]{$O$};
+\node at (0,-1)[right]{$-1$};
+\node at (-1,0)[below left]{$-1$};
+\node at (1,0)[below]{$1$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{center}
+\begin{tabular}{c|ccccc}
+\hline
+$x$ & $-3$ & $-\frac{3}{2}$ & $-\frac{1}{2}$  &  1 &2  \\[1.5ex]
+\hline
+$y$ & $-\frac{9}{2}$&$-\frac{9}{2}$&$\frac{1}{2}$&$\frac{1}{2}$&$\frac{4}{3}$\\[1.5ex]
+\hline
+\end{tabular}
+\end{center}
+
 \end{solution}
 
-
-
-
-
+\begin{ex}
+作下列函数的图象：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $y=\frac{x}{x^2+1}$
+    \item $y=x-\ln(x+1)$
+\end{enumerate}
+\end{multicols}
+\end{ex}
 
 
 
