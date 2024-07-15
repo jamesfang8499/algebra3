@@ -617,9 +617,25 @@ $\therefore\quad \Pr(A\cdot B)=\Pr(A)\cdot \Pr(B)
 答：至少有一人投进的概率是0.91．
 \end{solution}
 
-\begin{example}
+\noindent
+\begin{minipage}{.57\textwidth}
+    \begin{example}
     在一段线路中并联着3个自动控制的开关（图10.1），只要其中一个开关能够闭合，线路就能正常工作，假定在某段时间内每个开关能够闭合的概率都是0.7，计算在这段时间内线路正常工作的概率．
 \end{example}
+\end{minipage}\hfill
+\begin{minipage}{.4\textwidth}
+    \centering
+\begin{tikzpicture}
+\draw(-.25,1.5)--(-.25,1)--(-2,1);
+\draw(.25,1.5)--(.25,1)--(2,1);
+\draw(-.25,.5)--(-.25,0)--(-2.5,0);
+\draw(.25,.5)--(.25,0)--(2.5,0);
+\draw(-.25,-.5)--(-.25,-1)--(-2,-1);
+\draw(.25,-.5)--(.25,-1)--(2,-1);
+\end{tikzpicture}
+\captionof{figure}{}
+\end{minipage}
+
 
 \begin{analyze}
 “这段时间内线路正常工作”这一事件即 3个开关
