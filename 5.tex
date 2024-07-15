@@ -2111,78 +2111,84 @@ f(x)$的图象在区间$[a,b]$下凸(如图 12.15).
     \caption{}
 \end{figure}
 
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=stealth]
+\begin{scope}
+    \draw[->](-1,0)--(4,0)node[below]{$x$};
+\draw[->](0,-1)--(0,3.5)node[left]{$y$};
+\node[below left]{$O$};
+\draw[domain=.5:3.5, very thick, smooth]plot(\x, {-.23*(\x-3.5)^2+3});
+\draw[dashed](.5,0)node[below]{$a$}--(.5,.93);
+\draw[dashed](3.5,0)node[below]{$b$}--(3.5,3);
+\draw[dashed](1,0)node[below]{$x_1$}--(1,1.563)node[above left]{$A$};
+\draw[dashed](3,0)node[below]{$x_2$}--(3,2.943)node[above]{$B$};
+\draw[thick](1,1.563)--(3,2.943);
+\draw[thick](2,0)node[below]{$\frac{x_1+x_2}{2}$}--(2,2.48)node[above]{$C$};
+\node at (2,2.25)[ right]{$D$};
 
-
-
-
-
-
-
-
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
+\end{scope}
+\begin{scope}[xshift=6cm]
+    \draw[->](-1,0)--(4,0)node[below]{$x$};
+\draw[->](0,-1)--(0,3.5)node[left]{$y$};
+\node[below left]{$O$};
+\draw[domain=.5:3.5, very thick, smooth]plot(\x, {.23*(\x-.5)^2+1});
+\draw[dashed](.5,0)node[below]{$a$}--(.5,1);
+\draw[dashed](3.5,0)node[below]{$b$}--(3.5,3.07);
+\draw[dashed](1,0)node[below]{$x_1$}--(1,1.06)node[above left]{$A$};
+\draw[dashed](3,0)node[below]{$x_2$}--(3,2.44)node[above]{$B$};
+\draw[thick] (1,1.06)--(3,2.44);
+\draw[thick](2,0)node[below]{$\frac{x_1+x_2}{2}$}--(2,1.75)node[above]{$C$};
+\node at (2,1.52)[right]{$D$};
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
 
 \begin{example}
-    
+ 求证：函数$y=\log_a x\; (a>1)$的图象上凸.
 \end{example}
 
-\begin{solution}
+\begin{proof}
+任取$x_1,x_2\in (0,+\infty)$，且$x_1<x_2$.
+
+$\because\quad $函数$y=\log_a x\; (a>1)$是增函数
+
+$\therefore\quad \log_a\frac{x_1+x_2}{2}>\log_a \sqrt{x_1x_2}=\frac{\log_a x_1+\log_a x_2}{2}$
+
+$\therefore\quad$函数$y=\log_a x\; (a>1)$的图象上凸.
+\end{proof}
+
+根据定义，证明曲线$y=f(x)$在给定区间内是否上凸（或下凸），一般不像例12.34这么容易，下面我们介绍一种如何利用导数来确定曲线$y=f(x)$凸性的方法.
+
+对于在闭区间$[a,b]$上连续，在开区间内可导的函数$y=f(x)$，其图象如果是下凸的，从图12.16可以看出，曲线$y=f(x)$在点$(x,f(x))$处切线的上方（切点除外），并且随着$x$的增大，各点切线的斜率$f'(x)$也跟着增大. 又因为$f'(x)$的单调性可由$f'(x)$的导数，即$f''(x)$的
+正、负来判定. 于是启发我们可用$f(x)$的二阶导数来判定函数$y=f(x)$图象的凸性.
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=stealth]
+    \draw[->](-1,0)--(5,0)node[below]{$x$};
+    \draw[->](0,-1)--(0,3.5)node[left]{$y$};
+    \node[below left]{$O$};
+    \draw[domain=-1.5:2, very thick, smooth]plot(\x+2, {0.5*\x*\x+1});
+\draw[dashed](.5,0)node[below]{$a$}--(.5, 2.125)node[above]{$A$};
+\draw[dashed](1,0)node[below]{$x_1$}--(1, 1.5);
+\draw[dashed](2.5,0)node[below]{$x_2$}--(2.5, 1.125);
+\draw[dashed](3.5,0)node[below]{$x_3$}--(3.5, 2.125)node[left]{$y=f(x)$};
+\draw[dashed](4,0)node[below]{$b$}--(4, 3)node[above]{$B$};
+
+\draw[domain=1-.5:1+.5, smooth]plot(\x, {-\x+2.5});
+\draw[domain=2.5-.75:2.5+.75, smooth]plot(\x, {0.5*\x-0.125});
+\draw[domain=3.5-.75:3.5+.75, smooth]plot(\x, {1.5*\x-3.125});
+
+
+
+
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
     
-\end{solution}
-
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-
-
-
 
 \begin{thm}
 {定理} 设函数$y=f(x)$在开区间$(a,b)$内有二阶导数.
@@ -2199,7 +2205,7 @@ f(x)$的图象在区间$[a,b]$下凸(如图 12.15).
 \end{example}
 
 \begin{proof}
-\[y=\sin x,\quad y'=\cos x,\quad y''=-\sin x\]
+$y=\sin x,\qquad y'=\cos x,\qquad y''=-\sin x$
 
 $\because\quad $当$x\in(0,\pi)$时，$y''=-sinx<0$
 
