@@ -37,7 +37,7 @@
 \begin{solution}
     在这个随机试验中，所有的可能结果有4个：（正，正），（反，反），（反，正），（正，反）. 
     
-\[\therefore\quad \Omega=\{(\text{正,正}), (\text{反,反}), (\text{反,正}), (\text{正,反})\}\]
+\[\therefore\quad \Omega=\{(\text{正,正}),\; (\text{反,反}),\; (\text{反,正}),\; (\text{正,反})\}\]
 若记
 \[\begin{split}
     \omega_1=(\text{正, 正})&\qquad \omega_2=(\text{反, 反})\\
@@ -325,14 +325,14 @@ $$B=A_{1}+A_{2}+A_{3}=\{\omega_{1},\omega_{2},\omega_{3}\}$$
 \subsection{两事件的差}
 
 设$A,B$为两个事件，$A$发生而$B$不发生也是一个事件，
-称做事件$A$与事件$B$的差. 记作$A-B$.
+称作事件$A$与事件$B$的差. 记作$A-B$.
 
-在前面猫捉老鼠的例子中，$C-B$表示事件：猫甲提到老
+在前面猫捉老鼠的例子中，$C-B$表示事件：猫甲捉到老
 鼠而且猫乙没有捉到老鼠”.
 
 \subsection{事件的积}
 
-设$A,B$为两个事件, $A,B$同时发生也是一个事件，称做
+设$A,B$为两个事件, $A,B$同时发生也是一个事件，称作
 事件$A$与事件$B$的积（或交）记作$A\cdot B$或$AB$.
 
 例：在射击比赛时，有一射手连续向一目标射击 2次. 我们把“第一次射击命中目标”叫做事件$A_1$, “第二次击中目标” 记作$A_2$,把“两次都击中目标”叫做事件$B$. 则
@@ -382,7 +382,7 @@ $$B=A_{1}\cdot A_{2}$$
     \item 说明在什么条件下$A_1A_2\subseteq A_3$.
 \end{enumerate}
 
-\item 某仪器由三个元件组成，用$A_i\; (i=1,2,3)$表示事件“第$i$个元件合格”，试用$A_i\; (i=1,2,2,3)$表示下列事件：
+\item 某仪器由三个元件组成，用$A_i\; (i=1,2,3)$表示事件“第$i$个元件合格”，试用$A_i\; (i=1,2,3)$表示下列事件：
 \begin{enumerate}[(1)]
 \item “仪器合格”；
 \item “仪器至多有一个元件不合格”；
@@ -474,7 +474,7 @@ $$B=A_{1}\cdot A_{2}$$
     \Pr(\overline{A})=1-\Pr(A)\quad \text{或}\quad \Pr(A)=1-\Pr(\overline{A}) \tag{$3'$}
 \end{equation}
 
-上述例(2)中，“任取3件，至少有1件为一等品”记作事件$B$，这个事件的对立事件是：“任取3件，3件全不是一等品”（应记作事件$B$）.
+上述例(2)中，“任取3件，至少有1件为一等品”记作事件$B$，这个事件的对立事件是：“任取3件，3件全不是一等品”（应记作事件$\overline{B}$）.
 
 $\because\quad \Pr(\overline{B})=\frac{{\rm C}_3^3}{{\rm C}_{10}^3}=\frac{1}{120}$
 
@@ -584,7 +584,7 @@ $\therefore\quad \Pr(A\cdot B)=\Pr(A)\cdot \Pr(B)
 \begin{solution}
 （2）
 \[\begin{split}
-    \Pr(AB+AB)&=\Pr(AB)+\Pr(AB)\\
+    \Pr(A\overline{B}+\overline{A}B)&=\Pr(A\overline{B})+\Pr(\overline{A}B)\\
 &=\Pr(A)\cdot \Pr(\overline{B})+\Pr(\overline{A})\cdot \Pr(B)\\
 &=0.7\x(1-0.7)+(1-0.7)\x0.7\\
 &=0.21+0.21=0.42.    
@@ -644,13 +644,13 @@ $\therefore\quad \Pr(A\cdot B)=\Pr(A)\cdot \Pr(B)
 设这 3 个开关为$J_{A1}$, $J_{A2}$, $J_{A3}.$
 $J_{A1}$闭合为事件 $B_1$, $J_{A2}$闭合为事件 $B_2$, $J_{A3}$闭合为事件$B_{3}$, 则 $\overline{B_{1}}$, $\overline{B_{2}}$, $\overline{B_{3}}$ 分别为 $J_{A1}$不闭合, $J_{A2}$不闭合, $J_{A3}$不闭合. 令“这段时间内线路正常工作”为事件$B$.
 则
-$$B=B_{1}B_{2}B_{3}+B_{1}B_{2}\overline{B_{3}}+B_{1}\overline{B_{2}}B_{3}+\overline{B_{1}}B_{2}B_{3}+B_{1}\overline{B_{2}}\overline{B_{3}}+\overline{B_1}B_2\overline{B_3}+\overline{B_1}\overline{B_2}B_3$$
+$$B=B_{1}B_{2}B_{3}+B_{1}B_{2}\overline{B_{3}}+B_{1}\overline{B_{2}}B_{3}+\overline{B_{1}}B_{2}B_{3}+B_{1}\overline{B_{2}}\,\overline{B_{3}}+\overline{B_1}B_2\overline{B_3}+\overline{B_1}\,\overline{B_2}B_3$$
 那么 $\Pr(B)$等于右端各事件概率的和（因为它们互斥）
 
 这样作太麻烦了. 能否有其他作法呢？
 
 我们知道“3个开关中至少有一个能够闭合”这一事件的
-对立事件是“3个开关都不闭合”. 即$\overline{B_1}\overline{B_2}\overline{B_3}$.
+对立事件是“3个开关都不闭合”. 即$\overline{B_1}\,\overline{B_2}\,\overline{B_3}$.
 
 $\therefore\quad \Pr( B) = 1- \Pr( \overline {B_{1}}) P( \overline {B_{2}}) P( \overline {B_{3}}) $
 
@@ -706,7 +706,7 @@ $\therefore\quad \Pr(\overline{A})=1-0.8=0.2$
 \begin{tabular}{p{.6\textwidth}c}
     $\overline{A}_1\overline{A}_2\overline{A}_3$, & (${\rm C}_3^0$个)\\
    $A_{1} \overline{A}_{2} \overline{A}_{3}, \overline{A}_{1}A_{2} \overline{A}_{3}, \overline{A}_{1} \overline{A}_{2}A_{3}$,  & (${\rm C}_3^1$个)\\
-   $A_{1}A_{2} \overline{A}_{3},A_{1} \overline{A}_{2}A_{3}, \overline{A}_{1} \overline{A}_{2}A_{3}$,
+   $A_{1}A_{2} \overline{A}_{3},A_{1} \overline{A}_{2}A_{3}, \overline{A}_{1} {A}_{2}A_{3}$,
 & (${\rm C}_3^2$个)\\
 $A_1A_2A_3$ & (${\rm C}_3^3$个)
 \end{tabular}
@@ -877,8 +877,10 @@ $$P_{5}(4)={\rm C}_{5}^{4}P^{4}(1-P)^{5-4}=5\times0.8^{4}\times0.2\approx0.41$$
 \draw(1,-1) rectangle (4,1);
 \draw[fill=white](1.5,-1.1) rectangle (2,-.9);    
 \draw[fill=white](2.5,-1.1) rectangle (3,-.9);    
-
-
+\draw[fill=white](1.5,-1.1+1) rectangle (2,-.9+1);    
+\draw[fill=white](2.5,-1.1+1) rectangle (3,-.9+1);   
+\draw[fill=white](1.5,-1.1+2) rectangle (2,-.9+2);    
+\draw[fill=white](2.5,-1.1+2) rectangle (3,-.9+2);   
 \end{tikzpicture}
     \caption*{（第14题）}
 \end{figure}

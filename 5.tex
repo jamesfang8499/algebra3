@@ -106,7 +106,7 @@ $\therefore\quad \Lim{\Delta m}{0}\frac{\Delta S}{\Delta m}=f(m)$，
 
 \begin{ex}
 \begin{enumerate}
-    \item 已知函数$y=f(x)=x^2-x+2$的图象上有一动点$Q(x,y)$及定点$P(2,4)$.
+    \item 已知函数$y=f(x)=x^2-x+2$的图像上有一动点$Q(x,y)$及定点$P(2,4)$.
 \begin{enumerate}[(1)]
     \item 根据下表中$x_Q$的值，分别求出$f(x)$从2到$x_Q$之间的平均变化率；
 \begin{center}
@@ -198,14 +198,14 @@ $\therefore\quad \Lim{\Delta x}{0}\frac{\Delta y}{\Delta x}=\Lim{\Delta x}{0}\fr
 \end{ex}
 
 \section{导数的几何意义}
-在12.1节中我们已经知道，若点$Q(x_0+\Delta x,y_0+\Delta y)$、$P(x_0,y_0)$分别是函数$y=f(x)$的图象上的两点，则割线的斜率为
+在12.1节中我们已经知道，若点$Q(x_0+\Delta x,y_0+\Delta y)$、$P(x_0,y_0)$分别是函数$y=f(x)$的图像上的两点，则割线的斜率为
 \[K_{PQ}=\frac{\Delta y}{\Delta x}=\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}\]
 
 若函数$f(x)$在点$x_0$处可导，则
 \[f'(x_0)=\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x\to 0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}\]
 
 当$\Delta x\to 0$时，如图12.3，点$Q(x_0+\Delta x,y_0+\Delta y)$沿着函数
-$y=f(x)$的图象无限地趋近于$P(x_0,y_0)$点，这时割线$PQ$绕着点$P$转动，它的极限位置是函数$y=f(x)$的图象在点$P$处的切线. 因此，
+$y=f(x)$的图像无限地趋近于$P(x_0,y_0)$点，这时割线$PQ$绕着点$P$转动，它的极限位置是函数$y=f(x)$的图像在点$P$处的切线. 因此，
 \[K_{PT}=\lim_{Q\to P}K_{PQ}=\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}=f'(x_0)\]
 
 \begin{figure}[htp]
@@ -371,7 +371,7 @@ $\therefore\quad f(x)$在$x=1$处不可导. 同理可证，$f(x)$在$x=-1$处也
 
 \begin{ex}
 \begin{enumerate}
-    \item 作函数$y=|x^2-x|$的图象，并说明它在哪个点不可导.
+    \item 作函数$y=|x^2-x|$的图像，并说明它在哪个点不可导.
     \item 已知函数$f(x)=\begin{cases}
         x\sin\frac{1}{x},& x\ne 0\\
         0,& x=0
@@ -461,7 +461,7 @@ $\therefore\quad    f'(x)=c'=0$（$c$为常数）.
 &=\Lim{h}{0}\left({\rm C}^1_n x^{n-1}+{\rm C}^2_nx^{n-2}\cdot h+\cdots+{\rm C}^k_nx^{n-k}\cdot h^{k-1}+\cdots +h^{n-1}\right)\\
 &={\rm C}^1_nx^{n-1}=nx^{n-1}
 \end{split}\]
-$\therefore\quad f'(x)=(x^n)'=nx^{x-1}$（$n$为自然数）.
+$\therefore\quad f'(x)=(x^n)'=nx^{n-1}$（$n$为自然数）.
     \item $f(x)=\sin x$的导数.
     \[\begin{split}
         \because\quad f'(x)&=\Lim{h}{0}\frac{f(x+h)-f(x)}{h}=\Lim{h}{0}\frac{\sin (x+h)-\sin x}{h}\\
@@ -778,7 +778,7 @@ $\therefore\quad f' (x)=[(5x+2)^{4}]'=4(5x+2)^{3}(5x+2)=20(5x+2)^{3}$
 \[\begin{split}
     \because\quad y'_x=\lim_{\Delta x\to0}\frac{\Delta y}{\Delta x}&=\lim_{\Delta x\to0}\frac{f' (u)\cdot\Delta u+\alpha(\Delta u)}{\Delta x}\\
     &=f' \left(u\right)\lim_{\Delta x\to0}\frac{\Delta u}{\Delta x}+\lim_{\Delta x\to0}\frac{\alpha\left(\Delta u\right)}{\Delta x}\\
-    &=f(u)\varphi' (x)+0=y'_{u}\cdot  u'_{x}
+    &=f'(u)\varphi' (x)+0=y'_{u}\cdot  u'_{x}
 \end{split}\]
 $\therefore\quad y'_x=y'_{u}\cdot  u'_{x}$.
 \end{proof}
@@ -887,9 +887,7 @@ $\therefore\quad (a^x)'=a^x\ln a$
 
 
 \begin{example}
-    例4 求函数 $y= \sqrt [ 3] {\frac {x+ 2}{x- 1}}$ $( x> 1)$的导数
-
-
+求函数 $y= \sqrt [ 3] {\frac {x+ 2}{x- 1}}$ $( x> 1)$的导数
 \end{example}
 
 \begin{solution}
@@ -900,7 +898,7 @@ $\therefore\quad (a^x)'=a^x\ln a$
 \end{split}\]
 $\therefore\quad y'=-\frac{\sqrt[3]{(x-1)^2(x+2)}}{(x-1)^2(x+2)}$
 
-\textbf{解法2} $\because\quad y=\left(\sqrt[3]{\frac{x+2}{x-1}}\right)\quad (x>1)$
+\textbf{解法2} $\because\quad y= \sqrt[3]{\frac{x+2}{x-1}} \quad (x>1)$
 
 $\therefore\quad \ln y=\frac{1}{3}\left[\ln(x+2)-\ln(x-1)\right]$
 
@@ -1258,7 +1256,7 @@ $\therefore\quad y''\big|_{x=0}=2$.
 设函数$y=f(x)$在点$x$处可导.
 \begin{enumerate}
     \item 自变量$x$的改变量$\Delta x$又称为自变量$x$的微分，记作$\dd x$，即$\dd x=\Delta x$.
-    \item $f'(x)\cdot \dd x$称为$f(x)$在点$x$处的微分，记作$\dd y$，即$\dd y=f(x)\cdot \dd x$.
+    \item $f'(x)\cdot \dd x$称为$f(x)$在点$x$处的微分，记作$\dd y$，即$\dd y=f'(x)\cdot \dd x$.
 \end{enumerate}
 
     有了微分的定义，函数$y=f(x)$的导数$f'(x)$又可看成函数的微分$\dd y$与自变量的微分的商，即
@@ -1328,7 +1326,7 @@ $\therefore\quad y''\big|_{x=0}=2$.
 \dd y=\dd (e^{3x}\sin 2x)&=\sin 2x\cdot \dd(e^{3x})+e^{3x}\cdot \dd (\sin2x)\\
 &=\sin 2x\cdot e^{3x}\dd (3x)+e^{3x}\cos 2x\cdot \dd(2x)\\
 &=3\sin 2x\cdot e^{3x}\dd x+2e^{3x}\cdot \cos2x\dd x\\
-&=\left(3e^{3x}\sin2x+2e^{3x}\cdot \cos x\right)\dd x
+&=\left(3e^{3x}\sin2x+2e^{3x}\cdot \cos 2 x\right)\dd x
     \end{split}\]
 \end{solution}
 
@@ -1741,13 +1739,13 @@ $\therefore\quad \tan x>\sin x$, 其中$x\in\left(0,\frac\pi2\right)$.
 {定义} 设函数$y=f(x)$在点$x_0$处连续，并且$x_0$不是其定义区间的端点，$x$是点$x_0$的附近$(x_0-\delta,x_0+\delta)$中异于$x_0$的任意一点.
 \begin{enumerate}[(1)]
 \item 若恒有$f(x)>f(x_0)$，则称函数$f(x)$在点$x_0$处有一极小值$f(x_0)$, $x_0$称为函数$f(x)$的一个极小值点.
-\item 若恒有$f(x)<f(x_0)$，则称函数$f(x)$在点$x_0$处有一极小值$f(x_0)$, $x_0$称为函数$f(x)$的一个极大值点.
+\item 若恒有$f(x)<f(x_0)$，则称函数$f(x)$在点$x_0$处有一极大值$f(x_0)$, $x_0$称为函数$f(x)$的一个极大值点.
 \end{enumerate}
 函数的极大值和极小值可统称为函数的极值.
 \end{thm}
 
 
-从图12.7和图12.8可看出，若$f(x)$在点$x_0$处有极值，且$f(x)$在点$x_0$可导，则函数$y=f(x)$的图象在点$(x_0,f(x_0))$处的切线平行于$x$轴. 即$f'(x_0)=0$.（证明从略）.
+从图12.7和图12.8可看出，若$f(x)$在点$x_0$处有极值，且$f(x)$在点$x_0$可导，则函数$y=f(x)$的图像在点$(x_0,f(x_0))$处的切线平行于$x$轴. 即$f'(x_0)=0$.（证明从略）.
 
 若$f(x)$可导，把$f'(x)=0$的解称为函数$f(x)$的驻点.
 
@@ -2070,19 +2068,19 @@ $\therefore\quad x=24\sqrt{5}\approx 53.666$为运费函数的最小值点．
 \end{enumerate}
 \end{ex}
 
-\section{函数的图象的凸性与拐点}
+\section{函数的图像的凸性与拐点}
 
-我们过去在作函数的图象时曾经遇到这样一个问题，同
-是给定区间上的增(或减)函数，但函数的图象的几何性态却
-不同，例如图 12.14 中的图象，曲线上升有四种情况：
+我们过去在作函数的图像时曾经遇到这样一个问题，同
+是给定区间上的增(或减)函数，但函数的图像的几何性态却
+不同，例如图 12.14 中的图像，曲线上升有四种情况：
 
 一般地设函数 $y=f(x)$定义在区间$[a,b]$上，若对于任意
 $x_{1},x_{2}\in[a,b]$且$x_1<x_{2}$,
 \begin{enumerate}
     \item 若总有$f\left(\frac{x_{1}+x_{2}}{2}\right)>\frac{f(x_{1})+f(x_{2})}{2}$，
-则称函数 $y=f(x)$的图象在区间$[a,b]$上凸；
+则称函数 $y=f(x)$的图像在区间$[a,b]$上凸；
 \item 若总有$f\left(\frac{x_{1}+x_{2}}{2}\right)<\frac{f(x_{1})+f(x_{2})}{2}$，则称函数$y=
-f(x)$的图象在区间$[a,b]$下凸(如图 12.15).
+f(x)$的图像在区间$[a,b]$下凸(如图 12.15).
 \end{enumerate}
 
 \begin{figure}[htp]
@@ -2159,7 +2157,7 @@ f(x)$的图象在区间$[a,b]$下凸(如图 12.15).
 \end{figure}
 
 \begin{example}
- 求证：函数$y=\log_a x\; (a>1)$的图象上凸.
+ 求证：函数$y=\log_a x\; (a>1)$的图像上凸.
 \end{example}
 
 \begin{proof}
@@ -2169,13 +2167,13 @@ $\because\quad $函数$y=\log_a x\; (a>1)$是增函数
 
 $\therefore\quad \log_a\frac{x_1+x_2}{2}>\log_a \sqrt{x_1x_2}=\frac{\log_a x_1+\log_a x_2}{2}$
 
-$\therefore\quad$函数$y=\log_a x\; (a>1)$的图象上凸.
+$\therefore\quad$函数$y=\log_a x\; (a>1)$的图像上凸.
 \end{proof}
 
 根据定义，证明曲线$y=f(x)$在给定区间内是否上凸（或下凸），一般不像例12.34这么容易，下面我们介绍一种如何利用导数来确定曲线$y=f(x)$凸性的方法.
 
-对于在闭区间$[a,b]$上连续，在开区间内可导的函数$y=f(x)$，其图象如果是下凸的，从图12.16可以看出，曲线$y=f(x)$在点$(x,f(x))$处切线的上方（切点除外），并且随着$x$的增大，各点切线的斜率$f'(x)$也跟着增大. 又因为$f'(x)$的单调性可由$f'(x)$的导数，即$f''(x)$的
-正、负来判定. 于是启发我们可用$f(x)$的二阶导数来判定函数$y=f(x)$图象的凸性.
+对于在闭区间$[a,b]$上连续，在开区间内可导的函数$y=f(x)$，其图像如果是下凸的，从图12.16可以看出，曲线$y=f(x)$在点$(x,f(x))$处切线的上方（切点除外），并且随着$x$的增大，各点切线的斜率$f'(x)$也跟着增大. 又因为$f'(x)$的单调性可由$f'(x)$的导数，即$f''(x)$的
+正、负来判定. 于是启发我们可用$f(x)$的二阶导数来判定函数$y=f(x)$图像的凸性.
 
 \begin{figure}[htp]
     \centering
@@ -2225,10 +2223,10 @@ $\because\quad $当$x\in(0,\pi)$时，$y''=-sinx<0$
 $\therefore\quad $正弦曲线$y=\sin x$在区间$(0,\pi)$是上凸的.
 \end{proof}
 
-大家知道，对于函数$f(x)=\sin x\; (x\in (0,\pi))$, $x=\frac{\pi}{2}$是它的极大值点，$f'(x)$在点$\frac{\pi}{2}$附近的符号是“左正右负”与函数的图象上凸是一致的，因此，又可用$f''(x)$在该点值的正负来判定驻点是函数的极大值点还是极小值点. 下面给出一种利用二阶导数来判定函数极值的方法（证明留给读者）.
+大家知道，对于函数$f(x)=\sin x\; (x\in (0,\pi))$, $x=\frac{\pi}{2}$是它的极大值点，$f'(x)$在点$\frac{\pi}{2}$附近的符号是“左正右负”与函数的图像上凸是一致的，因此，又可用$f''(x)$在该点值的正负来判定驻点是函数的极大值点还是极小值点. 下面给出一种利用二阶导数来判定函数极值的方法（证明留给读者）.
 
 \begin{thm}
-    {定理} 设$f(x_0)=0$且$f''(x_0)$存在
+    {定理} 设$f'(x_0)=0$且$f''(x_0)$存在
 \begin{enumerate}[(1)]
 \item 若$f''(x_0)>0$，则$f(x)$在点$x_0$处有极小值$f(x_0)$;
 \item 若$f''(x_0)<0$，则$f(x)$在点$x_0$处有极大值$f(x_0)$.
@@ -2260,7 +2258,7 @@ $\therefore\quad y_{\text{极大}}=f(-2)=-\frac{8}{3}+8+4=\frac{28}{3}$.
 \end{solution}
 
 \begin{thm}
-    {定义} 设函数$y=f(x)$的图象上一点$P(x_0,f(x_0))$恰为曲线$y=f(x)$上凸与下凸部分的分界点，则称点$P(x_0, f(x_0))$为曲线$y=f(x)$的拐点，$x_0$称为函数$f(x)$的拐点.
+    {定义} 设函数$y=f(x)$的图像上一点$P(x_0,f(x_0))$恰为曲线$y=f(x)$上凸与下凸部分的分界点，则称点$P(x_0, f(x_0))$为曲线$y=f(x)$的拐点，$x_0$称为函数$f(x)$的拐点.
 \end{thm}
 
 
@@ -2283,27 +2281,27 @@ $\therefore\quad x=k\pi\; (k\in\Z)$为$f(x)=\sin x$的拐点.
 \item $f''(x_0)=0$;
 \item $f''(x)$的值在点的两侧异号
 \end{enumerate}
-则点$P(x_0,f(x_0))$为函数$y=f(x)$图象的拐点.
+则点$P(x_0,f(x_0))$为函数$y=f(x)$图像的拐点.
 
 类似于$f'(x_0)=0$是点$x_0$为$f(x)$的极值点的必要条件一样, $f''(x)=0$是点$x_0$为$f(x)$的拐点的必要条件，而不是充分条件. 例如，$f(x)=x^6$, $f''(x)=30x^4$，当$x\ne 0$时，$f''(x)>0$，故曲线$y=x^6$下凸，虽然$f''(0)=0$，但$x=0$不是函数的拐点，而是极小值点.
 
 \begin{ex}
 \begin{enumerate}
     \item 求曲线$y=\arctan x$的上凸、下凸区间及拐点.
-    \item 求证函数$y=a^x$ （$a>0$且$a\ne 1$）的图象下凸．
+    \item 求证函数$y=a^x$ （$a>0$且$a\ne 1$）的图像下凸．
     \item 求$f(x)=x^3-3x^2-9x+14$的极值及拐点.
 \end{enumerate}
 \end{ex}
 
-\section{函数的图象绘制}
-前面我们对函数的性质进行了进一步的研究，这就使我们能依据函数的性质，更准确地作出函数的图象. 今后在绘制
-一个函数的图象之前，一般应依次对函数作如下分析，然后列表画图.
+\section{函数的图像绘制}
+前面我们对函数的性质进行了进一步的研究，这就使我们能依据函数的性质，更准确地作出函数的图像. 今后在绘制
+一个函数的图像之前，一般应依次对函数作如下分析，然后列表画图.
 \begin{enumerate}
-\item 确定函数的定义域和值域（可大致确定图象的范围）；
+\item 确定函数的定义域和值域（可大致确定图像的范围）；
 \item 验证函数的奇偶性、周期性（可缩小研究函数的范围）；
-\item 找出函数图象的某些特殊点（例如图象与坐标轴的交点、间断点及其他特殊点）；
-\item 利用导数求出函数的单调区间、极值点和极值、图象的上凸或下凸区间、拐点等；
-\item 考察函数的图象是否有渐近线（了解图象若无限延伸时，它的变化趋势）.
+\item 找出函数图像的某些特殊点（例如图像与坐标轴的交点、间断点及其他特殊点）；
+\item 利用导数求出函数的单调区间、极值点和极值、图像的上凸或下凸区间、拐点等；
+\item 考察函数的图像是否有渐近线（了解图像若无限延伸时，它的变化趋势）.
 \end{enumerate}
 
 
@@ -2311,7 +2309,7 @@ $\therefore\quad x=k\pi\; (k\in\Z)$为$f(x)=\sin x$的拐点.
 
 
 \begin{example}
-    试作函数 $f(x)=\frac{x^{2}}{x+1}$的图象
+    试作函数 $f(x)=\frac{x^{2}}{x+1}$的图像
 \end{example}
 
 \begin{solution}
@@ -2334,11 +2332,11 @@ $\therefore\quad  y_{\text{极大}}=f(-2)=-4$.
 
 \item $\because\quad$当$x\in ( - \infty , - 1)$时, $f''( x) < 0$,
 
-$\therefore\quad $ 函数 $f(x)$的图象在区间$(-\infty,-1)$内上凸
+$\therefore\quad $ 函数 $f(x)$的图像在区间$(-\infty,-1)$内上凸
 
 $\because\quad $ 当$x\in(-1,+\infty)$时, $f''(x)>0$
 
-$\therefore\quad$ 函数 $f(x)$的图象在区间$(-1,-\infty)$内下凸
+$\therefore\quad$ 函数 $f(x)$的图像在区间$(-1,+\infty)$内下凸
 
 \item $f(x)$的递增区间是$(-\infty,-2]$, $[0,+\infty)$; 递减区间
 是$[-2,-1)$, $(-1,0]$
@@ -2352,7 +2350,7 @@ $\therefore\quad $ 当  $x\to \infty$时，曲线 $y=f(x)$上的点到直线 $y=
 
 又$\because\quad \Lim{x}{- 1^{+}}f( x) = + \infty,\quad \Lim{x}{- 1^{- }}f( x) = - \infty$,
 
-$\therefore\quad $ 函数 $f(x)$的图象的渐近线方程是 $x=-1$ 和
+$\therefore\quad $ 函数 $f(x)$的图像的渐近线方程是 $x=-1$ 和
 $y=x-1$.
 
 \item 由 以 上 分 析$f( x) \in ( - \infty , - 4) \cup [ 0, + \infty ) $.
@@ -2370,7 +2368,7 @@ $f(x)$   & $-\infty\nearrow-4$& $-4$& $-4\searrow -\infty$&间断点&$+\infty\se
 \hline
 \end{tabular}
 \end{center}
-函数$f(x)=\frac{x^2}{x+1}$的图象如图12.17.
+函数$f(x)=\frac{x^2}{x+1}$的图像如图12.17.
 \begin{figure}[htp]
     \centering
 \begin{tikzpicture}[>=stealth, scale=.6]
@@ -2401,7 +2399,7 @@ $y$ & $-\frac{9}{2}$&$-\frac{9}{2}$&$\frac{1}{2}$&$\frac{1}{2}$&$\frac{4}{3}$\\[
 \end{solution}
 
 \begin{ex}
-作下列函数的图象：
+作下列函数的图像：
 \begin{multicols}{2}
 \begin{enumerate}
     \item $y=\frac{x}{x^2+1}$
@@ -2457,7 +2455,7 @@ $y$ & $-\frac{9}{2}$&$-\frac{9}{2}$&$\frac{1}{2}$&$\frac{1}{2}$&$\frac{4}{3}$\\[
 \end{enumerate}
 \end{multicols}
 \item 半径为$R$、圆心角为$\alpha$弧度的扇形，卷成一个圆锥，求$\alpha$为多大时，圆锥的体积最大.
-\item 求下列函数的图象的上凸或下凸区间及函数的拐点.
+\item 求下列函数的图像的上凸或下凸区间及函数的拐点.
 \begin{multicols}{2}
     \begin{enumerate}[(1)]
         \item $y=\sqrt{x^2+1}$
@@ -2465,7 +2463,7 @@ $y$ & $-\frac{9}{2}$&$-\frac{9}{2}$&$\frac{1}{2}$&$\frac{1}{2}$&$\frac{4}{3}$\\[
     \end{enumerate}
 \end{multicols}
 
-\item 作下列函数的图象：
+\item 作下列函数的图像：
 \begin{multicols}{2}
     \begin{enumerate}[(1)]
         \item $y=\frac{1}{1-x^2}$
@@ -2511,9 +2509,9 @@ $f'(x)$表示$f(x)$在点$x$处对自变量的变化率，它的几何意义是�
 本章中求出的各基本初等函数的导数（或微分）公式是进行微分运算的依据，必须熟练掌握.
 
 \subsection{导数的应用}
-作为导数的应用，在本章中我们利用一阶、二阶导数讨论了函数的单调性、极值、最值、拐点及函数的图象的凸性等.
+作为导数的应用，在本章中我们利用一阶、二阶导数讨论了函数的单调性、极值、最值、拐点及函数的图像的凸性等.
 
-利用导数研究函数性质，使我们能够较为准确地作出函数的图象.
+利用导数研究函数性质，使我们能够较为准确地作出函数的图像.
 
 \section*{复习题十二}
 \begin{center}
@@ -2532,7 +2530,7 @@ $f'(x)$表示$f(x)$在点$x$处对自变量的变化率，它的几何意义是�
 \item 怎样求隐函数的导数？
 \item 怎样确定函数的极值点和单调区间？
 \item 怎样求函数的最值？
-\item 怎样确定函数的图象的凹凸区间及拐点？
+\item 怎样确定函数的图像的凹凸区间及拐点？
 \end{enumerate}
 
     \item 函数$f(x)=|x^2-3x|$在$x=3$处是否可导？
@@ -2641,7 +2639,7 @@ $y=x^2$交于$R$、$Q$两点，求证$P$为线段$RQ$的中点.
 
 \item 有一矩形的铁板$ABCD$，长与宽分别为16cm、10cm，若切去$A$、$B$为顶点的两个全等正方形，和以$C$、$D$为顶点的两个全等矩形（如图），用剩余
 部分沿直线折起做成长方体，求此长方体的最大体积.
-\item 作下列函数的图象：
+\item 作下列函数的图像：
 \begin{multicols}{2}
 \begin{enumerate}[(1)]
     \item $y=\left(\frac{1+x}{1-x}\right)^4$
